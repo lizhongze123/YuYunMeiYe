@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/y18"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/x24"
+                android:paddingTop="@dimen/y16"
+                android:text="按类型筛选"
+                android:textSize="@dimen/x24"
+                android:textColor="#3f3f3f" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/x32"
+                android:paddingTop="@dimen/x16">
+
+                <RadioButton
+                    android:id="@+id/rb_day"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:layout_marginRight="@dimen/x20"
+                    android:background="@drawable/report_radio_bg"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/y16"
+                    android:paddingLeft="@dimen/x32"
+                    android:paddingRight="@dimen/x32"
+                    android:paddingTop="@dimen/y16"
+                    android:text="日报"
+                    android:textSize="@dimen/x24"
+                    android:textColor="@drawable/report_radio_text" />
+
+                <RadioButton
+                    android:id="@+id/rb_week"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:layout_marginRight="@dimen/x20"
+                    android:background="@drawable/report_radio_bg"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/y16"
+                    android:paddingLeft="@dimen/x32"
+                    android:paddingRight="@dimen/x32"
+                    android:paddingTop="@dimen/y16"
+                    android:text="周报"
+                    android:textSize="@dimen/x24"
+                    android:textColor="@drawable/report_radio_text" />
+
+                <RadioButton
+                    android:id="@+id/rb_month"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:layout_marginRight="@dimen/x20"
+                    android:background="@drawable/report_radio_bg"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/y16"
+                    android:paddingLeft="@dimen/x32"
+                    android:paddingRight="@dimen/x32"
+                    android:paddingTop="@dimen/y16"
+                    android:text="月报"
+                    android:textSize="@dimen/x24"
+                    android:textColor="@drawable/report_radio_text" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y24"
+                android:background="#f5f5f5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/x24"
+                android:layout_marginTop="@dimen/y24"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/x24"
+                    android:textColor="#3f3f3f"
+                    android:text="按发送人筛选"/>
+
+                <cn.yuyun.yymy.ui.home.work.SelectPeopleView
+                    android:id="@+id/selectPeopleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y24"
+                    android:layout_marginBottom="@dimen/y24"
+                    android:background="@color/white"
+                    tools:listitem="@layout/item_pic_del" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y24"
+                android:background="#f5f5f5" />
+
+            <LinearLayout
+                android:id="@+id/ll_start"
+                android:layout_marginBottom="@dimen/y2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/x24"
+                android:background="@drawable/selector_item_default"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开始时间"
+                    android:textColor="#7A7A7A"
+                    android:textSize="@dimen/x28" />
+
+                <TextView
+                    android:id="@+id/tv_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/x8"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:textColor="#3f3f3f"
+                    android:textSize="@dimen/x28"
+                    tools:text="我是会员" />
+
+                <ImageView
+                    android:layout_width="@dimen/x32"
+                    android:layout_height="@dimen/x32"
+                    android:layout_gravity="center"
+                    android:src="@drawable/more_right_three" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y2"
+                android:background="#f5f5f5" />
+
+            <LinearLayout
+                android:id="@+id/ll_end"
+                android:layout_marginBottom="@dimen/y2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/x24"
+                android:background="@drawable/selector_item_default"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="结束时间"
+                    android:textColor="#7A7A7A"
+                    android:textSize="@dimen/x28" />
+
+                <TextView
+                    android:id="@+id/tv_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/x8"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:textColor="#3f3f3f"
+                    android:textSize="@dimen/x28"
+                    tools:text="我是会员" />
+
+                <ImageView
+                    android:layout_width="@dimen/x32"
+                    android:layout_height="@dimen/x32"
+                    android:layout_gravity="center"
+                    android:src="@drawable/more_right_three" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y24"
+                android:background="#f5f5f5" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_selectResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#F4F5F9"
+        android:gravity="center"
+        android:paddingBottom="@dimen/y15"
+        android:paddingLeft="@dimen/x32"
+        android:paddingRight="@dimen/x32"
+        android:paddingTop="@dimen/y15"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_refuse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_refuse_appointment"
+            android:gravity="center"
+            android:paddingBottom="@dimen/y26"
+            android:paddingTop="@dimen/y26"
+            android:text="取消"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/x32" />
+
+        <Space
+            android:layout_width="@dimen/x32"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_agree"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_agree_appointment"
+            android:gravity="center"
+            android:paddingBottom="@dimen/y26"
+            android:paddingTop="@dimen/y26"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x32" />
+
+    </LinearLayout>
+
+</RelativeLayout>

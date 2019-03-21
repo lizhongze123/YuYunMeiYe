@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:padding="@dimen/x24"
+        android:layout_marginBottom="@dimen/y30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="消耗门店："
+            android:textColor="#274335"
+            android:textSize="@dimen/x24" />
+
+        <TextView
+            android:id="@+id/tv_two"
+            android:layout_marginTop="@dimen/y16"
+            android:layout_below="@+id/tv_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="消耗次数："
+            android:textColor="#274335"
+            android:textSize="@dimen/x24" />
+
+        <TextView
+            android:id="@+id/tv_three"
+            android:layout_below="@+id/tv_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/y16"
+            android:text="消耗金额："
+            android:textColor="#274335"
+            android:textSize="@dimen/x24" />
+
+        <TextView
+            android:id="@+id/tv_four"
+            android:layout_marginTop="@dimen/y16"
+            android:layout_below="@+id/tv_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="消耗日期："
+            android:textColor="#274335"
+            android:textSize="@dimen/x24" />
+
+        <TextView
+            android:id="@+id/tv_five"
+            android:layout_below="@+id/tv_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/y16"
+            android:text="消耗时长："
+            android:textColor="#274335"
+            android:textSize="@dimen/x24" />
+
+        <TextView
+            android:id="@+id/tv_six"
+            android:layout_marginTop="@dimen/y16"
+            android:layout_below="@+id/tv_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="备注："
+            android:textColor="#274335"
+            android:textSize="@dimen/x24" />
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_below="@+id/tv_six"
+            android:layout_marginTop="@dimen/y24"
+            android:layout_marginBottom="@dimen/y24"
+            android:background="#f2f2f2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y2"/>
+
+        <LinearLayout
+            android:id="@+id/ll_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_line"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#7a7a7a"
+                android:textSize="@dimen/x24"
+                android:text="查看更多"/>
+
+            <ImageView
+                android:id="@+id/iv_expand"
+                android:layout_width="@dimen/x28"
+                android:layout_height="@dimen/y16"
+                android:layout_marginLeft="@dimen/x8"
+                android:src="@drawable/ic_expand" />
+
+        </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:visibility="gone"
+        android:layout_below="@+id/ll_more"
+        android:layout_marginTop="@dimen/y20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

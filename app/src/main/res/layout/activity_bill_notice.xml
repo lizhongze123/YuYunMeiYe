@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/y32">
+
+        <LinearLayout
+            android:id="@+id/ll_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/x22">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/y80"
+                android:gravity="center_vertical"
+                android:hint="提醒时间"
+                android:paddingLeft="@dimen/x22"
+                android:paddingRight="@dimen/x22"
+                android:textColor="#7A7A7A"
+                android:textSize="@dimen/x24" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:gravity="center_vertical|right"
+                android:paddingLeft="@dimen/x22"
+                android:textColor="#1C1C1C"
+                android:textSize="@dimen/x24" />
+
+        </LinearLayout>
+        
+        <View
+            android:background="#F5F5F5"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y10"/>
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y350"
+            android:background="@color/white"
+            android:gravity="top"
+            android:hint="提醒内容"
+            android:paddingLeft="@dimen/x22"
+            android:paddingTop="@dimen/x32"
+            android:textColor="#7A7A7A"
+            android:textSize="@dimen/x24" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

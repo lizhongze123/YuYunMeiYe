@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/y32"
+    android:paddingRight="@dimen/x32"
+    android:paddingLeft="@dimen/x32">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            tools:text="消费金额:20"
+            android:textColor="#1c1c1c"
+            android:textSize="@dimen/x20" />
+
+        <TextView
+            android:id="@+id/tv_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="储值金额:"
+            android:textColor="#1c1c1c"
+            android:textSize="@dimen/x20" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y16">
+
+        <TextView
+            android:id="@+id/tv_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            tools:text="消费金额:20"
+            android:textColor="#1c1c1c"
+            android:textSize="@dimen/x20" />
+
+        <TextView
+            android:id="@+id/tv_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            tools:text="实收金额:20"
+            android:textColor="#1c1c1c"
+            android:textSize="@dimen/x20" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y16">
+
+        <TextView
+            android:id="@+id/tv_five"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            tools:text="消费金额:20"
+            android:textColor="#1c1c1c"
+            android:textSize="@dimen/x20" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y16">
+
+        <TextView
+            android:id="@+id/tv_six"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            tools:text="消费金额:20"
+            android:textColor="#1c1c1c"
+            android:textSize="@dimen/x20" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_marginTop="@dimen/y32"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y2"
+        android:background="#f5f5f5"/>
+
+</LinearLayout>

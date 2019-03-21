@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:padding="@dimen/x32"
+    android:orientation="vertical">
+
+    <cn.yuyun.yymy.view.RoundAngleImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/x80"
+        android:layout_height="@dimen/y80"
+        android:src="@drawable/avatar_default_female"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1C1C1C"
+        android:layout_marginTop="@dimen/y8"
+        android:textSize="@dimen/x28"
+        tools:text="用户名" />
+
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y100"
+    android:background="@color/white"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_storeName"
+            android:layout_width="@dimen/x180"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="门店名称"
+            android:textColor="#274335"
+            android:textSize="@dimen/x20" />
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="@dimen/x180"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="商品类型"
+            android:textColor="#274335"
+            android:textSize="@dimen/x20" />
+
+        <TextView
+            android:id="@+id/tv_goodsName"
+            android:layout_width="@dimen/x180"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="商品名称"
+            android:textColor="#274335"
+            android:textSize="@dimen/x20" />
+
+        <TextView
+            android:id="@+id/tv_consumeType"
+            android:layout_width="@dimen/x180"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="消费类型"
+            android:textColor="#274335"
+            android:textSize="@dimen/x20" />
+
+        <TextView
+            android:id="@+id/tv_memberName"
+            android:layout_width="@dimen/x180"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="会员姓名"
+            android:textColor="#274335"
+            android:textSize="@dimen/x20" />
+
+        <TextView
+            android:id="@+id/tv_memberCard"
+            android:layout_width="@dimen/x180"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="会员卡号"
+            android:textColor="#274335"
+            android:textSize="@dimen/x20" />
+
+        <TextView
+            android:id="@+id/tv_two"
+            android:layout_width="@dimen/x180"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="品项实收"
+            android:textColor="#274335"
+            android:textSize="@dimen/x20" />
+
+        <TextView
+            android:id="@+id/tv_three"
+            android:layout_width="@dimen/x180"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="品项成交"
+            android:textColor="#274335"
+            android:textSize="@dimen/x20" />
+
+        <TextView
+            android:id="@+id/tv_four"
+            android:layout_width="@dimen/x180"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="品项业绩"
+            android:textColor="#274335"
+            android:textSize="@dimen/x20" />
+
+        <TextView
+            android:id="@+id/tv_five"
+            android:layout_width="@dimen/x180"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="品项消耗"
+            android:textColor="#274335"
+            android:textSize="@dimen/x20" />
+
+    </LinearLayout>
+
+</RelativeLayout>

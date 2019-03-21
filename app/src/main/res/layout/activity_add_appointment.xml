@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg_gray"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y88"
+        android:background="@drawable/shape_work_top_bg"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/x92"
+            android:layout_height="@dimen/x88"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_trans_divider"
+            android:src="@drawable/back_white"
+            android:paddingTop="@dimen/y22"
+            android:paddingBottom="@dimen/y22"
+            android:paddingLeft="@dimen/x24"
+            android:paddingRight="@dimen/x24"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:singleLine="true"
+            android:text="添加个人预约"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/x32" />
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingRight="@dimen/x24"
+            android:paddingLeft="@dimen/x24"
+            android:background="@drawable/selector_trans_divider"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="提交"
+            android:textColor="#fff"
+            android:textSize="@dimen/x28" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f8f8f8"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_selectStore"
+                android:layout_marginBottom="@dimen/y24"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y88"
+                android:background="@drawable/selector_item_default"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="门店"
+                    android:textSize="@dimen/x28"
+                    android:textColor="#7a7a7a"/>
+
+                <TextView
+                    android:id="@+id/tv_store"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:hint="请选择"
+                    android:textColorHint="#cccccc"
+                    android:textColor="#274335"
+                    android:textSize="@dimen/x28"
+                    android:textStyle="bold"
+                    tools:text="我是会员" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:visibility="gone"
+                    android:layout_width="@dimen/x32"
+                    android:layout_height="@dimen/x32"
+                    android:layout_gravity="center"
+                    android:src="@drawable/right_arrow_grey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_selectMember"
+                android:layout_marginBottom="@dimen/y24"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y88"
+                android:background="@drawable/selector_item_default"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择会员"
+                    android:textColor="#7A7A7A"
+                    android:textSize="@dimen/x28" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/x8"
+                    android:layout_weight="1"
+                    android:hint="请选择"
+                    android:textColorHint="#cccccc"
+                    android:gravity="right|center_vertical"
+                    android:textColor="#274335"
+                    android:textSize="@dimen/x28"
+                    android:textStyle="bold"
+                    tools:text="我是会员" />
+                
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="@dimen/x50"
+                    android:layout_height="@dimen/x50"
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/x8"/>
+
+                <ImageView
+                    android:id="@+id/iv_member"
+                    android:layout_width="@dimen/x32"
+                    android:layout_height="@dimen/x32"
+                    android:layout_gravity="center"
+                    android:src="@drawable/sel_arrow"  />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_project"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y88"
+                android:background="@drawable/selector_item_default"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择项目"
+                    android:textColor="#7A7A7A"
+                    android:textSize="@dimen/x28" />
+
+                <TextView
+                    android:id="@+id/tv_project"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/x8"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:textColor="#3F3F3F"
+                    android:hint="请选择"
+                    android:textColorHint="#cccccc"
+                    android:textSize="@dimen/x28"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    tools:text="我是会员我是会员我是会员我是会员我是会员我是会员我是会员" />
+
+                <ImageView
+                    android:id="@+id/iv_project"
+                    android:layout_width="@dimen/x32"
+                    android:layout_height="@dimen/x32"
+                    android:layout_gravity="center"
+                    android:src="@drawable/sel_arrow" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:drawingCacheQuality="low"
+                android:layout_marginLeft="@dimen/x24"
+                android:background="#f2f2f2"/>
+
+            <LinearLayout
+                android:id="@+id/ll_date"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y88"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24"
+                android:background="@drawable/selector_item_default"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择预约日期"
+                    android:textColor="#7A7A7A"
+                    android:textSize="@dimen/x28" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/x8"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:gravity="right|center_vertical"
+                    android:textColor="#3f3f3f"
+                    android:hint="请选择"
+                    android:textColorHint="#cccccc"
+                    android:textSize="@dimen/x28"
+                    tools:text="我是会员" />
+
+                <ImageView
+                    android:id="@+id/iv_date"
+                    android:layout_width="@dimen/x32"
+                    android:layout_height="@dimen/x32"
+                    android:layout_gravity="center"
+                    android:src="@drawable/sel_arrow" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:drawingCacheQuality="low"
+                android:layout_marginLeft="@dimen/x24"
+                android:background="#f2f2f2"/>
+
+            <LinearLayout
+                android:id="@+id/ll_time"
+                android:layout_marginBottom="@dimen/y24"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y88"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24"
+                android:background="@drawable/selector_item_default"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择预约时间"
+                    android:textColor="#7A7A7A"
+                    android:textSize="@dimen/x28" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/x8"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:textColor="#3f3f3f"
+                    android:textSize="@dimen/x28"
+                    android:textStyle="bold"
+                    android:hint="请选择"
+                    android:textColorHint="#cccccc"
+                    tools:text="我是会员" />
+
+                <ImageView
+                    android:id="@+id/iv_time"
+                    android:layout_width="@dimen/x32"
+                    android:layout_height="@dimen/x32"
+                    android:layout_gravity="center"
+                    android:src="@drawable/sel_arrow" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24"
+                android:paddingBottom="@dimen/y16"
+                android:paddingTop="@dimen/y24"
+                android:layout_marginRight="@dimen/x8"
+                android:layout_weight="1"
+                android:textColor="#274335"
+                android:textStyle="bold"
+                android:textSize="@dimen/x32"
+                android:hint="请选择"
+                android:textColorHint="#cccccc"
+                android:text="添加备注" />
+
+            <EditText
+                android:id="@+id/et_remark"
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:gravity="start"
+                android:hint="请填写备注信息"
+                android:minLines="6"
+                android:textColor="#3f3f3f"
+                android:textColorHint="#cccccc"
+                android:textSize="@dimen/x28" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

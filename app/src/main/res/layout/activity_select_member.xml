@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y80"
+        android:layout_marginTop="@dimen/y48"
+        android:layout_marginBottom="@dimen/y5"
+        android:layout_marginLeft="@dimen/x64"
+        android:layout_marginRight="@dimen/x64"
+        android:background="@drawable/shape_search_bg"
+        android:elevation="@dimen/x8"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/search_icon"
+            android:textColor="@color/gray_66" />
+
+        <EditText
+            android:id="@+id/et_input"
+            android:padding="@dimen/x8"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="搜索"
+            android:cursorVisible="false"
+            android:singleLine="true"
+            android:imeOptions="actionSearch"
+            android:textColor="@color/gray_99"
+            android:textSize="@dimen/x28" />
+
+    </LinearLayout>
+
+ <!--   <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F9F9F9"
+        android:descendantFocusability="afterDescendants"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false" />-->
+
+    <com.ajguan.library.EasyRefreshLayout
+        android:id="@+id/easylayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_select_member"
+            android:background="@color/main_bg_gray" />
+
+    </com.ajguan.library.EasyRefreshLayout>
+
+
+
+</RelativeLayout>

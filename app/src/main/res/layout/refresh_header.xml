@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:id="@+id/rl_refresh"
+    android:layout_height="@dimen/x100">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/x22"
+        android:textColor="#373736"
+        android:layout_centerVertical="true"
+        android:text="等等我，我快好了" />
+
+    <!--<View
+        android:id="@+id/successIcon"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/text"
+        android:background="@drawable/cpmplete_icon"
+        android:visibility="invisible"
+        tools:ignore="RtlHardcoded" />-->
+
+    <ImageView
+        android:id="@+id/successIcon"
+        android:layout_width="@dimen/x80"
+        android:layout_height="@dimen/y80"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/text"
+        android:layout_centerVertical="true"
+        android:scaleType="fitCenter"
+        android:visibility="invisible"
+        tools:ignore="RtlHardcoded"
+        android:src="@drawable/refresh_finish" />
+
+    <cn.yuyun.yymy.view.refresh.RefreshAnimView
+        android:id="@+id/arrowIcon"
+        android:layout_width="@dimen/x80"
+        android:layout_height="@dimen/y80"
+        android:layout_marginRight="5dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/text"
+        android:scaleType="fitCenter"
+        android:src="@drawable/refresh_start" />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/loadingIcon"
+        style="@style/SpinKitView.Small.Circle"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/text"
+        android:padding="3dp"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        app:SpinKit_Color="@color/colorAccent" />
+
+</RelativeLayout>

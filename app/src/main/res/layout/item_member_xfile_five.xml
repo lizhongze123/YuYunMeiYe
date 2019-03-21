@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:id="@+id/ll_five"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="喜欢的服务人员性格"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_fiveOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/y16"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="萌萌萌" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y48"
+            android:text="喜欢的书籍或电影"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_fiveTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/y16"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="萌萌萌" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y48"
+            android:text="感兴趣的话题"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_fiveThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/y16"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="萌萌萌" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y48"
+            android:text="宗教信仰"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_fiveFour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/y16"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y48"
+            android:text="旅游计划"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_fiveFive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/y16"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="体验、就诊场所" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/y30"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center">
+
+    <CheckBox
+        android:id="@+id/tv_name"
+        android:button="@null"
+        android:layout_width="@dimen/x204"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sel_store_bg"
+        android:gravity="center_horizontal"
+        android:paddingBottom="@dimen/y15"
+        android:paddingTop="@dimen/y15"
+        android:text="全部"
+        android:paddingLeft="@dimen/x8"
+        android:paddingRight="@dimen/x8"
+        android:textColor="@drawable/selector_text_filter"
+        android:textSize="@dimen/x24" />
+
+</LinearLayout>

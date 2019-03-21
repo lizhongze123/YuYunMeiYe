@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:id="@+id/ll_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="感兴趣的话题"
+            android:textStyle="bold"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_twoOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:paddingBottom="@dimen/y16"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="萌萌萌" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y48"
+            android:text="作息表"
+            android:textStyle="bold"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_twoTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:paddingBottom="@dimen/y16"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="萌萌萌" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y48"
+            android:text="喜欢的饮品"
+            android:textStyle="bold"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_twoThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:paddingBottom="@dimen/y16"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="萌萌萌" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y48"
+            android:text="常去的超市"
+            android:textStyle="bold"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_twoFour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:paddingBottom="@dimen/y16"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="孩子所在学校" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y48"
+            android:text="孩子所在学校"
+            android:textStyle="bold"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_twoFive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:paddingBottom="@dimen/y16"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="体验、就诊场所" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y48"
+            android:text="体检、就诊场所"
+            android:textStyle="bold"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_twoSix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:paddingBottom="@dimen/y16"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="萌萌萌" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y48"
+            android:text="常去的酒店"
+            android:textStyle="bold"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_twoSeven"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:paddingBottom="@dimen/y16"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="萌萌萌" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y48"
+            android:text="旅游计划"
+            android:textStyle="bold"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_twoEight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:paddingBottom="@dimen/y16"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="萌萌萌" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y48"
+            android:text="过敏药物"
+            android:textStyle="bold"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_twoNine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:paddingBottom="@dimen/y16"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="萌萌萌" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y48"
+            android:textStyle="bold"
+            android:text="首饰"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_twoTen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:paddingBottom="@dimen/y16"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="萌萌萌" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y48"
+            android:text="衣着打扮品牌价格"
+            android:textStyle="bold"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_twoEleven"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:paddingBottom="@dimen/y16"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="萌萌萌" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y48"
+            android:text="家居用品品牌价格"
+            android:textStyle="bold"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_twoTwelve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:paddingBottom="@dimen/y16"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="萌萌萌" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,1 @@
+include ':app', ':ext_utils', ':http-module', ':ext_photo', ':ext_pickview', ':ext_amap', ':ext_dialog'

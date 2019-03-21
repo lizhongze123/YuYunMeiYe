@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y100"
+    android:id="@+id/rl"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/x8"
+            android:paddingRight="@dimen/x8"
+            android:paddingTop="@dimen/y4"
+            android:paddingBottom="@dimen/y4"
+            android:layout_height="match_parent"
+            tools:text="很大集团ddddddd"
+            android:textColor="#274335"
+            android:textSize="@dimen/x20"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_two"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            tools:text="桃子ddddddddddddd"
+            android:paddingLeft="@dimen/x8"
+            android:paddingRight="@dimen/x8"
+            android:paddingTop="@dimen/y4"
+            android:paddingBottom="@dimen/y4"
+            android:textColor="#274335"
+            android:textSize="@dimen/x20"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_three"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            tools:text="122121"
+            android:paddingLeft="@dimen/x8"
+            android:paddingRight="@dimen/x8"
+            android:paddingTop="@dimen/y4"
+            android:paddingBottom="@dimen/y4"
+            android:textColor="#274335"
+            android:textSize="@dimen/x20"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_four"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            tools:text="25252"
+            android:paddingLeft="@dimen/x8"
+            android:paddingRight="@dimen/x8"
+            android:paddingTop="@dimen/y4"
+            android:paddingBottom="@dimen/y4"
+            android:textColor="#274335"
+            android:textSize="@dimen/x20"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_five"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            tools:text="桃子"
+            android:paddingLeft="@dimen/x8"
+            android:paddingRight="@dimen/x8"
+            android:paddingTop="@dimen/y4"
+            android:paddingBottom="@dimen/y4"
+            android:textColor="#274335"
+            android:textSize="@dimen/x20"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

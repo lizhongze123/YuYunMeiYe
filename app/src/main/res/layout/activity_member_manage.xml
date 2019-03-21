@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg_gray">
+
+        <RelativeLayout
+            android:id="@+id/relay_background"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y88"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/title_bg">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/x92"
+                android:layout_height="@dimen/x88"
+                android:layout_centerVertical="true"
+                android:background="@drawable/common_selector_default"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24"
+                android:paddingTop="@dimen/y22"
+                android:paddingBottom="@dimen/y22"
+                android:src="@drawable/back_black" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/y12"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@drawable/analysis_radio_group_bg"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/analysis_radio_bg_left"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/x33"
+                    android:paddingRight="@dimen/x33"
+                    android:text="我的"
+                    android:textColor="@drawable/analysis_radio_text"
+                    android:textSize="@dimen/x24" />
+
+                <RadioButton
+                    android:id="@+id/rb_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/analysis_radio_bg_right"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/x33"
+                    android:paddingRight="@dimen/x33"
+                    android:text="公共"
+                    android:textColor="@drawable/analysis_radio_text"
+                    android:textSize="@dimen/x24" />
+
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/iv_gift"
+                android:layout_width="@dimen/x92"
+                android:layout_height="@dimen/y88"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/iv_add"
+                android:background="@drawable/common_selector_default"
+                android:paddingTop="@dimen/y22"
+                android:paddingBottom="@dimen/y22"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24"
+                android:src="@drawable/icon_birthday" />
+
+            <ImageView
+                android:id="@+id/iv_add"
+                android:layout_width="@dimen/x92"
+                android:layout_height="@dimen/y88"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/common_selector_default"
+                android:layout_centerVertical="true"
+                android:paddingTop="@dimen/y22"
+                android:paddingBottom="@dimen/y22"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24"
+                android:src="@drawable/icon_add_two" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line"
+            style="@style/separation_line"
+            android:layout_below="@+id/relay_background" />
+
+        <LinearLayout
+            android:id="@+id/ll_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_total"
+            android:layout_below="@+id/line"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/rl_one"
+                layout="@layout/activity_my_member" />
+
+            <include
+                android:id="@+id/ll_two"
+                layout="@layout/activity_select_store" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- 右侧滑动栏 -->
+    <RelativeLayout
+        android:id="@+id/main_right_drawer_layout"
+        android:layout_width="@dimen/x480"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/y30"
+        android:clickable="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:paddingTop="@dimen/y20"
+            android:layout_above="@+id/ll_submit"
+            android:layout_marginBottom="@dimen/y30"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/y24"
+                    android:text="会员级别"
+                    android:textSize="@dimen/x24" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y2">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/item_data" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_negative"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/shape_filter_cancel_bg"
+                android:paddingBottom="@dimen/y20"
+                android:paddingTop="@dimen/y20"
+                android:gravity="center"
+                android:text="重置"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x28" />
+
+            <TextView
+                android:id="@+id/tv_positive"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_filter_sumbit_bg"
+                android:paddingBottom="@dimen/y20"
+                android:paddingTop="@dimen/y20"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x28" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

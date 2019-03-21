@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl"
+    android:paddingLeft="@dimen/x24"
+    android:paddingRight="@dimen/x24"
+    android:paddingTop="@dimen/y24"
+    android:background="@drawable/common_selector_list_view_item">
+
+    <cn.yuyun.yymy.view.bannerview.RoundAngleImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/x80"
+        android:layout_height="@dimen/y80"
+        android:layout_alignParentLeft="true"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/avatar_default_female"
+        android:layout_marginRight="@dimen/x16"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/iv_avatar">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="用名户拒绝快递看看了了哦"
+                android:singleLine="true"
+                android:maxEms="8"
+                android:ellipsize="end"
+                android:textColor="#3f3f3f"
+                android:textStyle="bold"
+                android:textSize="@dimen/x28" />
+
+            <TextView
+                android:id="@+id/tv_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x16"
+                android:layout_toRightOf="@id/tv_name"
+                android:layout_centerVertical="true"
+                android:textColor="#FF9B59"
+                android:lines="1"
+                android:textSize="@dimen/x20"
+                tools:text="钻石" />
+
+            <TextView
+                android:id="@+id/tv_createTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="2018年5月23日 14:44:44"
+                android:textColor="#FF7A7A7A"
+                android:textSize="@dimen/x18" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_store"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:textColor="#7a7a7a"
+            android:textSize="@dimen/x22"
+            tools:text="12352525525" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y16">
+
+            <TextView
+                android:id="@+id/tv_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textColor="#3f3f3f"
+                android:textSize="@dimen/x22"
+                android:text="消费类型：" />
+
+            <TextView
+                android:id="@+id/tv_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="#3f3f3f"
+                android:textSize="@dimen/x22"
+                android:text="消费金额：" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:textColor="#3f3f3f"
+            android:textSize="@dimen/x22"
+            android:text="消费时间：" />
+
+        <TextView
+            android:id="@+id/tv_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:textColor="#3f3f3f"
+            android:textSize="@dimen/x22"
+            android:text="消费单据号：" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1"
+            android:drawingCacheQuality="low"
+            android:background="#f2f2f2"
+            android:layout_marginTop="@dimen/y24"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y8"
+        android:background="@drawable/shape_bill_type_bg"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/white"
+        android:paddingLeft="@dimen/x14"
+        android:paddingRight="@dimen/x14"
+        android:paddingTop="@dimen/y2"
+        android:paddingBottom="@dimen/y2"
+        android:textSize="@dimen/x20"
+        android:visibility="gone"
+        android:text="个人单" />
+
+</RelativeLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/x48"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#f8f8f8">
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/x60"
+        android:background="@null"
+        android:textColorHint="#cccccc"
+        android:maxLength="25"
+        android:hint="请输入你的标签" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y2"
+        android:layout_marginTop="@dimen/y18"
+        android:layout_marginBottom="@dimen/y18"
+        android:background="#E8E8E8"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自定义标签建议8个字符之内"
+        android:textColor="#7a7a7a"
+        android:textSize="@dimen/x28" />
+
+</LinearLayout>

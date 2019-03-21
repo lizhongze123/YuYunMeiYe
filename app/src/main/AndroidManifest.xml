@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="cn.yuyun.yymy">
+
+
+    <!-- Required -->
+    <permission
+        android:name="cn.yuyun.yymy.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Required  一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="cn.yuyun.yymy.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:name=".app.MyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".main.TransitionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ViewBigPicTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="cn.yuyun.yymy.utils.update.MyFileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths_update" />
+        </provider>
+
+        <service
+            android:name=".utils.up.DownloadService"
+            android:exported="false" />
+
+        <activity
+            android:name=".main.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.me.SetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.me.SwitchAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.me.EmailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.me.RecordListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.me.RecordDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.me.RecordServiceDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.BillStorevalueDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.me.PeopleNumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.me.MemberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".web.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.other.SearchGlobalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.other.UserAggrementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.memberdata.MemberDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.memberdata.MemberDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.RecommendListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.SendBirthdayMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.AssetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.AddMemberLabelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.PublicLabelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.SelectMemberLabelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.AddCommunicationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.EditCommunicationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.CommunicationDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.MemberAnalysisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.GuideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.ForgetPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.other.SystemNoticeListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.other.SystemNoticeDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.notice.NoticeListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.member.MemberAppointmentDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.notice.NoticeDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.notice.MyNoticeListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.train.TrainListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.train.AddTrainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.actions.AddActionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.actions.EditActionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.help.DiscoveryDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.actions.AddNoticeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.train.MyTrainListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.train.TrainDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.appointment.AppointmentActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="" />
+        <activity
+            android:name=".ui.home.appointment.AddAppointmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.analysis.AnalysisOneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.analysis.AnalysisTwoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.analysis.AnalysisThreeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.analysis.AnalysisOneAllActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.analysis.AnalysisTwoAllActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.analysis.AnalysisThreeAllActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.attendance.AttendanceSignActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.attendance.AttendanceRuleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.attendance.AddRulesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.leave.ReviewedDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.leave.LeaveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.leave.ApplyDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.work.WorkCommentNoticeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.work.WorkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.work.AllWorkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.work.StaffPicWallActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.work.PublishMomentsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.cashier.SelectCashierMemberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.work.MomentsNoticeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.work.FilterWorkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.work.ResultWorkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.actions.ActionsListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.actions.ActionsDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.leave.StoreListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.leave.SelectStoreListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.leave.SelectMyStoreListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.leave.SelectStoreListMultiSelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.leave.StaffListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.leave.NewLeaveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".map.MapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.storemember.StoreMemberListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.member.StoreMemberListAllActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.appointment.ProjectListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.work.MomentsDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.work.MyWorkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.TaCustomerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.attendance.AttendanceOutSignActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.AssetProductDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.AssetServiceDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.attendance.SignRecordDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.AssetDepositDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.AssetPacketDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.MemberXFileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.CommunicationListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.CallbackListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.AppointmentListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.AppointmentDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.StoredvalueListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.StoreDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.StoreDetailAllActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.StoreDetailHqActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.StoreAnalysisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.StaffDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.StaffAttendanceRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.PersonTimeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.ManualFeeListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.AddMemberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.analysis.AnalysisActivityDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.EditMemberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.me.BillDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.me.PeopleNumListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.me.EmailListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.me.EmailDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.me.HandmakeDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.pmember.PublicMemberListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.pmember.SearchMemberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.BirthdayMemberListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.member.MemberManagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.unboxing.UnboxingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.unboxing.FilterUnboxingLabelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.unboxing.FilterUnboxingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.unboxing.AddUnboxingLabelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.unboxing.SelectUnboxingLabelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.unboxing.PublishUnboxingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.unboxing.UnboxingDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.attendance.SearchLocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.attendance.SearchLocationActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.StaffAnalysisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.StaffAnalysisAllActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.ResultsListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.AmountTotalListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.AmountConsumeListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.store.staff.StoreStaffListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.staff.StoreStaffListAllActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.staff.StoreStaffListHqActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.member.RecycledMemberListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.member.StoreMemberListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.staff.StaffRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.staff.StaffBirthdayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.staff.RecycledStaffListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.staff.AddStaffActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.staff.AttendanceStoreStaffActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.MemberAnalysisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.MemberAnalysisAllActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.FinanceReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.FinanceReportHqActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.ReportBusinessDetailAllActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.ReportLiabilitiesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.ReportLiabilitiesAllActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.ReportLiabilitiesTwoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.ReportLiabilitiesThreeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.ReportHqOutputActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.ReportHqOutputHqActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.ReportBusinessStatisticsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.ReportBusinessStatisticsAllActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.StockActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.StockAllActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.ReportConsumeDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.ReportConsumeDetailAllActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.bill.StoreBillStorevalueDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.bill.StoreBillHqActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.bill.BillManageStorevalueDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.StockDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.ReportBusinessDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.ReportBrandContrastActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.ReportBrandContrastOneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.ReportBrandContrastAllActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.ReportBrandContrastOneAllActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.ReportStoreSaleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.report.ReportStoreSaleAllActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.member.AddStoreMemberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.member.Tessss"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.member.SelectMemberListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.member.MemberConsumeBillActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.member.SendMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.bill.BillActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.book.AppointmentBookActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.book.CurrentAppointmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.book.AddStoreAppointmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.staff.SelectStaffListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.book.AppointmentBookDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.bill.BillManageDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.bill.SignPaintActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.home.LandscapeLineviewActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.store.attendance.AttendanceStatisticsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.attendance.AttendanceStatisticsAllActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.attendance.AttendanceStatisticsDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.bill.BillManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.bill.BillRemarkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.bill.BillNoticekActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.bill.StoreBillActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.bill.StoreBillDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.bill.BillManageSystemDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.me.MyCollectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.me.ServiceNumListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.staff.MultipleChoiceStaffActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.store.member.MultipleChoiceMemberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.cashier.CashierMemberDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.cashier.SelectMulProjectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.cashier.CashierBuyListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.cashier.CommisionListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.cashier.CashierOverviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.cashier.CashierChargeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.cashier.CashierConsumeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.group.PartnerLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.group.GroupListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.group.GroupActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.TestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent" />
+
+        <activity
+            android:name=".ui.me.MyPicActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name=".main.PubActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent" />
+        <activity
+            android:name=".ui.other.ViewBigImageActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+
+        <receiver android:name=".utils.update.ApkInstallReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".push.MyJPushReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="cn.yuyun.yymy" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

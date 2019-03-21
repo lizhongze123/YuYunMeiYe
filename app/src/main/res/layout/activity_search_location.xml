@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/keyWord"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:imeOptions="actionSearch"
+            android:inputType="textCapWords"
+            android:singleLine="true"
+            android:background="@color/main_bg_gray"
+            android:textColorHint="@color/gray_99"
+            android:layout_marginRight="10dp"
+            app:queryHint="请输入关键字"
+            app:searchIcon="@null" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:background="@drawable/selector_item_default"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:text="取消"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/inputtip_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp">
+
+    </ListView>
+
+</LinearLayout>

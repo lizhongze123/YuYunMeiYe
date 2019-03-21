@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/main_bg_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:background="@color/white"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:textColor="@color/gray_66"
+            android:src="@drawable/search_icon" />
+
+        <TextView
+            android:id="@+id/tv_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/gray_99"
+            android:text="搜索会员"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_filter"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/y10">
+
+        <RelativeLayout
+            android:id="@+id/rl_start"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="@dimen/y25"
+                android:paddingTop="@dimen/y25"
+                android:text="开始时间"
+                android:textColor="#3f3f3f"
+                android:textSize="@dimen/x28" />
+
+            <ImageView
+                android:layout_width="@dimen/x24"
+                android:layout_height="@dimen/x24"
+                android:layout_marginLeft="@dimen/x4"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_start"
+                android:src="@drawable/triangle_down"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="@dimen/x2"
+            android:layout_height="@dimen/y64"
+            android:layout_gravity="center"
+            android:background="#BBEAEB"
+            android:drawingCacheQuality="low" />
+
+        <RelativeLayout
+            android:id="@+id/rl_end"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="@dimen/y25"
+                android:paddingTop="@dimen/y25"
+                android:text="结束时间"
+                android:textColor="#3f3f3f"
+                android:textSize="@dimen/x28" />
+
+            <ImageView
+                android:layout_width="@dimen/x24"
+                android:layout_height="@dimen/x24"
+                android:layout_marginLeft="@dimen/x4"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_end"
+                android:src="@drawable/triangle_down"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <cn.yuyun.yymy.view.EmptyLayout
+        android:id="@+id/empty"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.ajguan.library.EasyRefreshLayout
+        android:id="@+id/easylayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_record"/>
+
+    </com.ajguan.library.EasyRefreshLayout>
+
+</LinearLayout>

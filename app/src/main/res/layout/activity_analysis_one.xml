@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/totalDiagram"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg">
+
+    <LinearLayout
+        android:id="@+id/ll_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_start"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="@dimen/y25"
+                android:paddingTop="@dimen/y25"
+                android:text="开始时间"
+                android:textColor="#FF1C1C1C"
+                android:textSize="@dimen/x28" />
+
+            <ImageView
+                android:layout_width="@dimen/x24"
+                android:layout_height="@dimen/y24"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x3"
+                android:layout_toRightOf="@+id/tv_start"
+                android:src="@drawable/triangle_down" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="@dimen/x2"
+            android:layout_height="match_parent"
+            android:background="#F5F5F5"
+            android:drawingCacheQuality="low" />
+
+        <RelativeLayout
+            android:id="@+id/rl_end"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="@dimen/y25"
+                android:paddingTop="@dimen/y25"
+                android:text="结束时间"
+                android:textColor="#FF1C1C1C"
+                android:textSize="@dimen/x28" />
+
+            <ImageView
+                android:layout_width="@dimen/x24"
+                android:layout_height="@dimen/y24"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x3"
+                android:layout_toRightOf="@+id/tv_end"
+                android:src="@drawable/triangle_down" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_fixed"
+        android:layout_width="@dimen/x180"
+        android:layout_height="@dimen/y70"
+        android:layout_below="@+id/ll_filter"
+        android:background="#f8f8f8"
+        android:gravity="center"
+        android:text="品牌名称"
+        android:textColor="#274335"
+        android:textSize="@dimen/x24" />
+
+    <cn.yuyun.yymy.view.MyHorizontalScrollView
+        android:id="@+id/sv_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y70"
+        android:layout_below="@+id/ll_filter"
+        android:layout_marginStart="@dimen/y1"
+        android:layout_toRightOf="@+id/tv_fixed"
+        android:background="#f8f8f8"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_one"
+                android:layout_width="@dimen/x180"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="商品类型"
+                android:textColor="#274335"
+                android:textSize="@dimen/x24" />
+
+            <LinearLayout
+                android:layout_width="@dimen/x180"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="品项实收"
+                    android:textColor="#274335"
+                    android:textSize="@dimen/x24" />
+
+                <ImageView
+                    android:id="@+id/iv_two"
+                    android:layout_width="@dimen/x24"
+                    android:layout_height="@dimen/y24"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:src="@drawable/order_normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/x180"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="品项成交"
+                    android:textColor="#274335"
+                    android:textSize="@dimen/x24" />
+
+                <ImageView
+                    android:id="@+id/iv_three"
+                    android:layout_width="@dimen/x24"
+                    android:layout_height="@dimen/y24"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:src="@drawable/order_normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/x180"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="品项业绩"
+                    android:textColor="#274335"
+                    android:textSize="@dimen/x24" />
+
+                <ImageView
+                    android:id="@+id/iv_four"
+                    android:layout_width="@dimen/x24"
+                    android:layout_height="@dimen/y24"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:src="@drawable/order_normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/x180"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="品项消耗"
+                    android:textColor="#274335"
+                    android:textSize="@dimen/x24" />
+
+                <ImageView
+                    android:id="@+id/iv_five"
+                    android:layout_width="@dimen/x24"
+                    android:layout_height="@dimen/y24"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:src="@drawable/order_normal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </cn.yuyun.yymy.view.MyHorizontalScrollView>
+
+    <com.ajguan.library.EasyRefreshLayout
+        android:id="@+id/easyRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/sv_top">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_left"
+                    android:layout_width="@dimen/x180"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/sv_top"
+                    android:background="@drawable/shape_rv_book_bg"
+                    android:paddingRight="@dimen/y2"
+                    android:scrollbars="none"
+                    tools:listitem="@layout/item_analysis_single" />
+
+                <cn.yuyun.yymy.view.MyHorizontalScrollView
+                    android:id="@+id/sv_right"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sv_top"
+                    android:layout_marginStart="@dimen/y1"
+                    android:layout_toRightOf="@+id/rv_left"
+                    android:background="@color/white"
+                    android:fillViewport="true"
+                    android:scrollbars="none">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_analysis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/rv_left"
+                        tools:listitem="@layout/item_analysis_row" />
+
+                </cn.yuyun.yymy.view.MyHorizontalScrollView>
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </com.ajguan.library.EasyRefreshLayout>
+
+    <TextView
+        android:id="@+id/tv_total"
+        android:layout_width="@dimen/x180"
+        android:layout_height="@dimen/y88"
+        android:gravity="center"
+        android:text="总计"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/x24" />
+
+    <cn.yuyun.yymy.view.MyHorizontalScrollView
+        android:id="@+id/sv_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y88"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/tv_total"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/x180"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="- -"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/x20" />
+
+            <TextView
+                android:id="@+id/tv_oneTotal"
+                android:layout_width="@dimen/x180"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="0.00"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/x20" />
+
+            <TextView
+                android:id="@+id/tv_twoTotal"
+                android:layout_width="@dimen/x180"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="0.00"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/x20" />
+
+            <TextView
+                android:id="@+id/tv_threeTotal"
+                android:layout_width="@dimen/x180"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="0.00"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/x20" />
+
+            <TextView
+                android:id="@+id/tv_fourTotal"
+                android:layout_width="@dimen/x180"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="0.00"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/x20" />
+
+        </LinearLayout>
+
+    </cn.yuyun.yymy.view.MyHorizontalScrollView>
+
+    <cn.yuyun.yymy.view.EmptyLayout
+        android:id="@+id/emptyLayout"
+        android:visibility="gone"
+        android:layout_below="@+id/tv_fixed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_bg">
+
+  <TextView
+      android:padding="10dp"
+      android:gravity="center"
+      android:textSize="14sp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textColor="@color/gray_66"
+      android:text="暂无评论，请发表你的评论" />
+
+</RelativeLayout>

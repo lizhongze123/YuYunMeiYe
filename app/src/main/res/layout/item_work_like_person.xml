@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingRight="@dimen/x8"
+    android:paddingBottom="@dimen/x8"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+   <cn.yuyun.yymy.view.bannerview.RoundAngleImageView
+       android:id="@+id/iv_avatar"
+       android:src="@drawable/avatar_default_female"
+       android:layout_toRightOf="@+id/iv_likeDesc"
+       android:layout_width="@dimen/x56"
+       android:layout_height="@dimen/x56" />
+
+</RelativeLayout>

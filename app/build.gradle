@@ -1,0 +1,202 @@
+apply plugin: 'com.android.application'
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+def keystoreFilepath = ''
+def keystorePSW = ''
+def keystoreAlias = ''
+def keystoreAliasPSW = ''
+// default keystore file, PLZ config file path in local.properties
+def keyfile = file('s.keystore.temp')
+
+Properties properties = new Properties()
+// local.properties file in the root director
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+keystoreFilepath = properties.getProperty("keystore.path")
+
+if (keystoreFilepath) {
+    keystorePSW = properties.getProperty("keystore.password")
+    keystoreAlias = properties.getProperty("keystore.alias")
+    keystoreAliasPSW = properties.getProperty("keystore.alias_password")
+    keyfile = file(keystoreFilepath)
+}
+
+android {
+    compileSdkVersion rootProject.ext.androidCompileSdkVersion
+    buildToolsVersion rootProject.ext.androidBuildToolsVersion
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+
+    defaultConfig {
+        applicationId "cn.yuyun.yymy"
+        minSdkVersion rootProject.ext.androidMinSdkVersion
+        targetSdkVersion rootProject.ext.androidTargetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+//            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86'
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+//             还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        multiDexEnabled true
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "91fc6034272f31d8fb161017", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+
+                qqappid: "QQ05fc5b14",
+                MTA_APPKEY:"Aqc1106692149",
+                MTA_CHANNEL:"应用宝"
+        ]
+
+
+    }
+
+    //签名
+    signingConfigs {
+        debug {
+            keyAlias keystoreAlias
+            keyPassword keystoreAliasPSW
+            storeFile keyfile
+            storePassword keystorePSW
+
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+
+        release {
+            keyAlias keystoreAlias
+            keyPassword keystoreAliasPSW
+            storeFile keyfile
+            storePassword keystorePSW
+
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        debug {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "String", "BASE_URL", '"https://slb.yuyunrj.com/"'
+            buildConfigField "String", "BASE_TEST_URL", '"http://yytestapi.yuyunrj.com/"'
+            resValue "string", "image_url_prefix", '"http://resource.yuyunrj.com/"'
+            resValue "string", "audio_url_prefix", '"http://resource.yuyunrj.com/"'
+//            resValue "string", "image_url_prefix_test", '"http://192.168.0.199:9109"'
+            signingConfig signingConfigs.debug
+            manifestPlaceholders = [qqappid: "你的qq appid"]
+        }
+
+        release {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "BASE_URL", '"https://api38.yuyunrj.com/"'
+            buildConfigField "String", "BASE_TEST_URL", '"http://yytestapi.yuyunrj.com/"'
+            resValue "string", "image_url_prefix", '"http://resource.yuyunrj.com/"'
+            resValue "string", "audio_url_prefix", '"http://resource.yuyunrj.com/"'
+//            resValue "string", "image_url_prefix_test", '"http://192.168.1.199:9109"'
+            //签名
+            signingConfig signingConfigs.release
+            manifestPlaceholders = [qqappid: "你的qq appid"]
+            applicationVariants.all { variant ->
+                variant.outputs.all {
+                    // 输出apk名称为yymy_v1.0_2018-01-01.apk
+                    def fileName = "yyrj_v${defaultConfig.versionName}_${releaseTime()}.apk"
+                    outputFileName = fileName
+                }
+            }
+        }
+
+
+
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:appcompat-v7:25.3.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:design:25.3.1'
+    implementation 'com.android.support:cardview-v7:25.3.1'
+
+    //https://www.jianshu.com/p/b343fcff51b0 recycleview
+    implementation 'com.github.anzaizai:EasyRefreshLayout:1.3.1'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'cn.jiguang.sdk:jpush:3.1.6'
+    // 此处以JPush 3.1.1 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:1.2.5'
+    // 此处以JCore 1.1.9 版本为例。
+    implementation 'com.yanzhenjie:permission:2.0.0-rc4'
+    implementation project(':ext_amap')
+    implementation project(':ext_dialog')
+    implementation project(':ext_photo')
+    implementation project(':ext_pickview')
+    implementation project(':ext_utils')
+    implementation project(':http-module')
+
+    //修改状态栏颜色，可以改为浅色
+    implementation 'com.githang:status-bar-compat:0.7'
+    //  沉浸式状态栏  https://github.com/Zackratos/UltimateBar
+    //implementation 'org.zackratos:ultimatebar:1.0.3'
+    implementation 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    implementation 'com.youth.banner:banner:1.4.2'
+
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+
+/*    implementation 'com.umeng.sdk:share-core:latest.integration'
+    implementation 'com.umeng.sdk:share-qq:latest.integration'
+    implementation 'com.umeng.sdk:share-wechat:latest.integration'
+    implementation 'com.umeng.sdk:share-sina:latest.integration'
+    implementation 'com.umeng.sdk:shareboard-widget:latest.integration'.
+    implementation 'com.umeng.sdk:common:latest.integration'
+    implementation 'com.umeng.sdk:analytics:latest.integration'*/
+
+    implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
+
+    implementation 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+
+    implementation 'com.yanzhenjie:recyclerview-swipe:1.1.4'
+    implementation 'com.contrarywind:Android-PickerView:4.1.3'
+
+    implementation 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.2.0
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+
+    implementation 'com.zzhoujay.richtext:richtext:2.4.7'
+
+    implementation 'com.moxun:tagcloudlib:1.2.0'
+
+    implementation 'com.github.DingMouRen:LayoutManagerGroup:1e6f4f96eb'
+
+    implementation 'com.github.huburt-Hu:NewbieGuide:v2.4.0'
+
+    //mta 3.3 稳定版
+    implementation 'com.qq.mta:mta:3.3.1-release'
+    //mid  jar包 必须添加
+    implementation 'com.tencent.mid:mid:4.0.6-release'
+    //微信分享
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+}

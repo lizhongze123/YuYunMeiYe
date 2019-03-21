@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/y10"
+    android:paddingBottom="@dimen/y24"
+    android:background="@drawable/selector_item_default"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/x24">
+
+    <LinearLayout
+        android:id="@+id/origin_ub_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/y18"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+        <include layout="@layout/item_unboxing_normal_topbar" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:paddingLeft="@dimen/x24"
+            android:paddingRight="@dimen/x24"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/y10"
+            android:layout_marginTop="@dimen/y16"
+            android:lineSpacingExtra="@dimen/y4"
+            android:maxLines="4"
+            android:ellipsize="end"
+            android:textColor="#3f3f3f"
+            android:textSize="@dimen/x28"
+            tools:text="#知政#【财政部谈跨境电商新政：不会给消费者带来太大负担】财政部关税司有关负责人坦承，新政客观上会提高消费者总体税负水平。但其指出，在税率设置上暂给予一定优惠，具体而言有升有降。新政有利于电商化解部分成本，对大众消费品价格总体影响有限，不会给消费者带来太大负担。http://t.cn/RqXsr16" />
+
+        <LinearLayout
+            android:id="@+id/ll_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/x24"
+            android:paddingRight="@dimen/x24">
+
+            <ImageView
+                android:layout_width="@dimen/x32"
+                android:layout_height="@dimen/x32"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/home_icon_label" />
+
+            <cn.yuyun.yymy.view.FlowLayout
+                android:id="@+id/flowlayout"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+        </LinearLayout>
+
+        <cn.yuyun.yymy.view.SquareImageView
+            android:id="@+id/iv"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="@dimen/y16"
+            android:layout_marginBottom="@dimen/y16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/favorities_delete"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="#929292"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:paddingLeft="@dimen/x24"
+        android:paddingRight="@dimen/x24"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/x18"
+            android:textColor="#7a7a7a"
+            tools:text="已获100个赞"/>
+
+        <RelativeLayout
+            android:id="@+id/bottombar_comment"
+            android:layout_toLeftOf="@+id/bottombar_favorites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/y16"
+            android:paddingRight="@dimen/x16">
+
+            <ImageView
+                android:id="@+id/iv_comment"
+                android:layout_width="@dimen/x32"
+                android:layout_height="@dimen/x32"
+                android:src="@drawable/wb_comment" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottombar_favorites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/bottombar_like"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/y16"
+            android:paddingRight="@dimen/x16"
+            >
+
+            <ImageView
+                android:id="@+id/iv_favorites"
+                android:layout_width="@dimen/x32"
+                android:layout_height="@dimen/x32"
+                android:background="@drawable/wb_favorites_sel" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottombar_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/y16">
+
+            <ImageView
+                android:id="@+id/iv_like"
+                android:layout_width="@dimen/x32"
+                android:layout_height="@dimen/x32"
+                android:background="@drawable/wb_like_sel" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

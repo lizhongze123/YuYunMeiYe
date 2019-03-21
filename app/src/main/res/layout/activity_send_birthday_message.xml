@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_bg"
+        tools:listitem="@layout/item_send_member" />
+
+    <View
+        android:id="@+id/line"
+        android:background="#f5f5f5"
+        android:layout_below="@+id/rv_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y10"/>
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_below="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="top"
+        android:hint="请输入内容..."
+        android:inputType="textMultiLine"
+        android:maxLength="200"
+        android:minHeight="@dimen/y350"
+        android:padding="@dimen/x32"
+        android:textColor="#274335"
+        android:textSize="@dimen/x28" />
+
+        <TextView
+            android:id="@+id/tv_change"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FC6B6B"
+            android:paddingRight="15dp"
+            android:paddingBottom="@dimen/y24"
+            android:paddingTop="@dimen/y24"
+            android:gravity="center"
+            android:text="换一个祝福语"
+            android:textSize="@dimen/x36" />
+
+</RelativeLayout>

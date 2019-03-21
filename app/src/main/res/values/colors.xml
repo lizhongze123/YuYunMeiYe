@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#50D3C0</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="main_bg">#fff</color>
+    <color name="main_bg_gray">#f0f0f0</color>
+    <color name="title_bg">#fff</color>
+    <color name="title_mine">#d7fefd</color>
+
+    <color name="login_bg">#f8f8f8</color>
+
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+
+    <color name="gray_33">#333333</color>
+    <color name="gray_66">#666666</color>
+    <color name="gray_99">#999999</color>
+    <color name="gray_88">#888888</color>
+    <color name="gray_bb">#bbbbbb</color>
+    <color name="gray_cc">#cccccc</color>
+    <color name="gray_dd">#dddddd</color>
+
+    <color name="read">#5E5E5E</color>
+    <color name="unread">#3F3F3F</color>
+
+    <color name="gray_55_00">#55000000</color>
+
+    <color name="status_already_refund">#FC6B6B</color>
+    <color name="status_done">#FF9B59</color>
+    <color name="status_cancel">#7a7a7a</color>
+    <color name="status_normal">#50D3C0</color>
+    <color name="status_expired">#7a7a7a</color>
+
+    <color name="work_bg">#f5f5f5</color>
+
+    <color name="text_red">#ff4747</color>
+    <color name="text_green">#50D3C0</color>
+    <color name="text_blue">#59B8FD</color>
+    <color name="text_orange">#f29518</color>
+
+    <color name="approve_green">#50D3C0</color>
+    <color name="approve_red">#FC6B6B</color>
+    <color name="approve_gray">#E8E8E8</color>
+
+    <color name="sign_normal">#89C5F3</color>
+
+    <color name="side_gray">#D3D3D3</color>
+
+    <color name="radio_textcolor_false">#818181</color>
+    <color name="radio_textcolor_true">#3DD08A</color>
+
+    <color name="user_info_message_notice">#FF2121 </color>
+
+    <color name="line_blue">#4e57fc</color>
+    <color name="line_green">#3DD08A</color>
+    <color name="line_red">#ff474c</color>
+    <color name="light_green_one">#3DD08A</color>
+    <color name="light_green_two">#66EBD5</color>
+    <color name="line_green_three">#7EEA8E</color>
+
+    <color name="histogram_one">#75A1FF</color>
+    <color name="histogram_two">#FFBA81</color>
+    <color name="histogram_three">#81DDFF</color>
+
+    <!--item的5.0一下版本选择器颜色-->
+    <color name="itemLowBackground">#d9d9d9</color>
+
+    <!--tab背景-->
+    <color name="colorTabTextCheck">#54d570</color>
+    <color name="colorTabTextNormal">#585858</color>
+    <color name="colorTabLine">#54d570</color>
+
+    <color name="icon_press">#68C270</color>
+    <color name="text_color">#576B95</color>
+
+    <color name="index_colors_1">#f56b6b</color>
+    <color name="index_colors_3">#9a89b9</color>
+    <color name="index_colors_2">#33cc99</color>
+    <color name="index_colors_9">#179ffa</color>
+    <color name="index_colors_5">#f29518</color>
+    <color name="index_colors_7">#66cccc</color>
+    <color name="index_colors_6">#ff99cc</color>
+    <color name="index_colors_8">#6ab4fd</color>
+    <color name="index_colors_4">#f5c51d</color>
+    <color name="index_colors_10">#a3adde</color>
+    <color name="index_colors_13">#fa8585</color>
+    <color name="index_colors_12">#94c33a</color>
+    <color name="index_colors_11">#4ccfe1</color>
+
+
+    <!--正在加载时候图片的占位图颜色-白天 -->
+    <color name="loadding_img_bg">#E4E4E4</color>
+    <!--顶部的分割线-->
+    <color name="commentbar_top_drive">#f2f2f2</color>
+    <!--微博的按压状态下的背景颜色-->
+    <color name="origin_highlight_bg">#ededed</color>
+    <!--微博的普通背景颜色-->
+    <color name="origin_nor_bg">#FFFFFF</color>
+    <!--竖直的分割线-->
+    <color name="commentbar_vertical_drive">#f4f4f4</color>
+
+    <color name="pub_bg">#99f3f5f7</color>
+
+    <color name="transparent">#00ffffff</color>
+
+    <color name="transparent_black">#44000000</color>
+
+    <color name="pub_text">#636363</color>
+
+    <color name="must_red">#FF0000</color>
+
+    <color name="status_text">#575b57</color>
+
+    <color name="text_black">#1C1C1C</color>
+    <color name="text_gray">#7A7A7A</color>
+    <color name="f5">#f5f5f5</color>
+    <color name="text_primary">#4BDE93</color>
+    <color name="text_default_gray">#888888</color>
+
+    <color name="alipay_color">#3B92F0</color>
+    <color name="cash_color">#B37CF3</color>
+    <color name="wechat_color">#35E573</color>
+    <color name="card_color">#98ED3D</color>
+    <color name="transfer_color">#F8EF5B</color>
+    <color name="amount_total_color">#FD564F</color>
+    <color name="real_refund_color">#64D9FF</color>
+    <color name="refund_amount_to_storedvalue_color">#20D7DC</color>
+
+    <color name="amount_consume_color">#3B92F0</color>
+    <color name="total_amount_color">#FD564F</color>
+    <color name="person_number_color">#98ED3D</color>
+    <color name="person_times_color">#62D8FF</color>
+    <color name="refund_realpay_color">#35E573</color>
+
+
+    <color name="appointment_agree">#F5F5F5</color>
+    <color name="appointment_reviewing">#E4E4E4</color>
+    <color name="appointment_book_child">#F5F5F5</color>
+    <color name="appointment_book_child_press">#55F5F5F5</color>
+
+    <color name="colorRedBg">#fa5148</color>
+
+
+    <color name="item_analysis">#f8f8f8</color>
+
+    <!--折线自定义view相关属性-->
+    <color name="color_fundView_xTxtColor">#3f3f3f</color>
+    <color name="color_fundView_yTxtColor">#7a7a7a</color>
+    <color name="color_fundView_xLineColor">#f2f2f2</color>
+    <color name="color_fundView_floatRectColor">#60000000</color>
+    <color name="color_fundView_brokenLineColor">#50D3C0</color>
+    <color name="color_fundView_longPressLineColor">#4BDE93</color>
+    <color name="color_fundView_pressIncomeTxt">#ec210f</color>
+    <color name="color_fundView_pressIncomeTxtBg">#87c9e7</color>
+    <color name="color_fundView_defIncomeTxt">#000000</color>
+
+</resources>

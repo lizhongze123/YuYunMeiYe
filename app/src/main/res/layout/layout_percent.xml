@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="1dp"
+    android:background="@drawable/selector_item_default"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:padding="15dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_weight="0"
+            android:layout_height="wrap_content"
+            android:text="百分比"
+            android:textColor="@color/gray_33"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_percent"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textColor="@color/gray_66"
+            android:layout_height="wrap_content"
+            tools:text="HDJDHDJDHDJDHJ"
+            android:textSize="14sp"/>
+
+    </LinearLayout>

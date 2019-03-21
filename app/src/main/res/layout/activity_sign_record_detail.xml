@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y88"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:layout_height="wrap_content"
+                    android:text="打卡时间"
+                    android:textColor="#7A7A7A"
+                    android:textSize="@dimen/x28"/>
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#3f3f3f"
+                    android:layout_marginLeft="@dimen/x16"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    tools:text="HDJDHDJDHDJDHJ"
+                    android:textSize="@dimen/x28"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y24"
+                android:background="#f5f5f5"
+                android:drawingCacheQuality="low" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y88"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:layout_height="wrap_content"
+                    android:text="打卡位置"
+                    android:textColor="#7a7a7a"
+                    android:textSize="@dimen/x28"/>
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/x16"
+                    android:textColor="#3f3f3f"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    tools:text="HDJDHDJDHDJDHJ"
+                    android:textSize="@dimen/x28"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y24"
+                android:background="#f5f5f5"
+                android:drawingCacheQuality="low" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3f3f3f"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/x24"
+                android:layout_marginTop="@dimen/y24"
+                android:text="外勤备注"
+                android:textSize="@dimen/x32"/>
+
+            <TextView
+                android:id="@+id/tv_remark"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/y16"
+                android:layout_marginBottom="@dimen/y16"
+                android:textColor="#3f3f3f"
+                android:layout_marginLeft="@dimen/x24"
+                android:layout_marginRight="@dimen/x24"
+                android:layout_height="wrap_content"
+                tools:text="HDJDHDJDHDJDHfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffJ"
+                android:textSize="@dimen/x28"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y24"
+                android:background="#f5f5f5"
+                android:drawingCacheQuality="low" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_wallDesc"
+                android:padding="@dimen/x24"
+                tools:listitem="@layout/item_pic_wall" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

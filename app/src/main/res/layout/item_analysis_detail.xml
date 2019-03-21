@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/y10"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/common_selector_list_view_item"
+        android:paddingBottom="@dimen/y32"
+        android:paddingLeft="@dimen/x32"
+        android:paddingRight="@dimen/x32"
+        android:paddingTop="@dimen/y32">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/x50"
+            android:layout_height="@dimen/y50"
+            android:layout_alignParentLeft="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/avatar_default_female" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_toRightOf="@id/iv_avatar">
+
+
+            <LinearLayout
+                android:id="@+id/ll_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="用户名"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/x28" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="待审核"
+                android:textColor="#7A7A7A"
+                android:textSize="@dimen/x18" />
+
+            <LinearLayout
+                android:id="@+id/ll_top"
+                android:layout_marginTop="@dimen/y16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_user">
+
+                <TextView
+                    android:id="@+id/tv_typeDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="#FF222222"
+                    android:textSize="@dimen/x24"
+                    tools:text="御玫瑰清凉系列" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_middle"
+                android:layout_marginTop="@dimen/y16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_top">
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="#FF222222"
+                    android:textSize="@dimen/x24"
+                    android:text="商品类型:" />
+
+                <TextView
+                    android:id="@+id/tv_goodsName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#FF222222"
+                    android:textSize="@dimen/x24"
+                    tools:text="2018年5月29日 15:31:10" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/y16"
+                android:layout_toLeftOf="@+id/ll_store"
+                android:layout_below="@+id/ll_middle">
+
+                <TextView
+                    android:id="@+id/tv_consumePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF222222"
+                    android:textSize="@dimen/x24"
+                    android:text="服务人员:" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_store"
+                android:layout_marginLeft="@dimen/x16"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/y16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_middle">
+
+                <TextView
+                    android:id="@+id/tv_totalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF222222"
+                    android:textSize="@dimen/x24"
+                    android:text="门店:" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

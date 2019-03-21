@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_result"
+        android:background="@color/white"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/y24"
+            android:paddingTop="@dimen/y24">
+
+            <TextView
+                android:id="@+id/tv_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x24"
+                android:text="项目名称"
+                android:textColor="#274335"
+                android:textSize="@dimen/x24" />
+
+            <TextView
+                android:id="@+id/tv_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x24"
+                android:layout_marginTop="@dimen/y16"
+                android:text="资产编号"
+                android:textColor="#274335"
+                android:textSize="@dimen/x24" />
+
+            <TextView
+                android:id="@+id/tv_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x24"
+                android:layout_marginTop="@dimen/y16"
+                android:text="购买时间"
+                android:textColor="#274335"
+                android:textSize="@dimen/x24" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y2"
+                android:layout_marginLeft="@dimen/x24"
+                android:layout_marginTop="@dimen/y16"
+                android:background="#f5f5f5" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24">
+
+                <TextView
+                    android:id="@+id/tv_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="@dimen/y16"
+                    android:text="成交价格"
+                    android:textColor="#274335"
+                    android:textSize="@dimen/x24" />
+
+                <TextView
+                    android:id="@+id/tv_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/x24"
+                    android:layout_marginTop="@dimen/y16"
+                    android:text="已付金额"
+                    android:textColor="#274335"
+                    android:textSize="@dimen/x24" />
+
+                <TextView
+                    android:id="@+id/tv_six"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="@dimen/y16"
+                    android:layout_below="@+id/tv_four"
+                    android:text="欠款金额"
+                    android:textColor="#274335"
+                    android:textSize="@dimen/x24" />
+
+                <TextView
+                    android:id="@+id/tv_seven"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/x24"
+                    android:layout_marginTop="@dimen/y16"
+                    android:layout_below="@+id/tv_four"
+                    android:text="剩余金额"
+                    android:textColor="#274335"
+                    android:textSize="@dimen/x24" />
+
+                <TextView
+                    android:id="@+id/tv_eight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="@dimen/y16"
+                    android:layout_below="@+id/tv_six"
+                    android:text="已用金额"
+                    android:textColor="#274335"
+                    android:textSize="@dimen/x24" />
+
+                <TextView
+                    android:id="@+id/tv_nine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/x24"
+                    android:layout_marginTop="@dimen/y16"
+                    android:layout_below="@+id/tv_six"
+                    android:text="已退金额"
+                    android:textColor="#274335"
+                    android:textSize="@dimen/x24" />
+
+
+                <TextView
+                    android:id="@+id/tv_ten"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="@dimen/y16"
+                    android:layout_below="@+id/tv_eight"
+                    android:text="资产总数"
+                    android:textColor="#274335"
+                    android:textSize="@dimen/x24" />
+
+                <TextView
+                    android:id="@+id/tv_eleven"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/x24"
+                    android:layout_marginTop="@dimen/y16"
+                    android:layout_below="@+id/tv_eight"
+                    android:text="剩余次数"
+                    android:textColor="#274335"
+                    android:textSize="@dimen/x24" />
+
+                <TextView
+                    android:id="@+id/tv_twelve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="@dimen/y16"
+                    android:layout_below="@+id/tv_eleven"
+                    android:text="耗卡次数"
+                    android:textColor="#274335"
+                    android:textSize="@dimen/x24" />
+
+                <TextView
+                    android:id="@+id/tv_thirteen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/x24"
+                    android:layout_marginTop="@dimen/y16"
+                    android:layout_below="@+id/tv_eleven"
+                    android:text="退款洗漱"
+                    android:textColor="#274335"
+                    android:textSize="@dimen/x24" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y24"
+                android:layout_marginTop="@dimen/y24"
+                android:background="#f5f5f5" />
+
+            <LinearLayout
+                android:id="@+id/ll_buy"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textColor="#274335"
+                    android:layout_marginTop="@dimen/y24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/x32"
+                    android:text="购买记录"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_buy"
+                    android:layout_marginTop="@dimen/y24"
+                    android:padding="@dimen/x24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_buyOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="购买门店"
+                        android:textColor="#274335"
+                        android:textSize="@dimen/x24" />
+
+                    <TextView
+                        android:id="@+id/tv_buyTwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/tv_buyOne"
+                        android:layout_marginTop="@dimen/y16"
+                        android:text="实际付款"
+                        android:textColor="#274335"
+                        android:textSize="@dimen/x24" />
+
+                    <TextView
+                        android:id="@+id/tv_buyThree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/tv_buyOne"
+                        android:layout_marginTop="@dimen/y16"
+                        android:text="储值支付"
+                        android:textColor="#274335"
+                        android:textSize="@dimen/x24" />
+
+                    <TextView
+                        android:id="@+id/tv_buyFour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/tv_buyTwo"
+                        android:layout_marginTop="@dimen/y16"
+                        android:text="免单支付"
+                        android:textColor="#274335"
+                        android:textSize="@dimen/x24" />
+
+                    <TextView
+                        android:id="@+id/tv_buyFive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/tv_buyTwo"
+                        android:layout_marginTop="@dimen/y16"
+                        android:text="现金券支付"
+                        android:textColor="#274335"
+                        android:textSize="@dimen/x24" />
+
+                    <TextView
+                        android:id="@+id/tv_buySix"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/tv_buyFive"
+                        android:layout_marginTop="@dimen/y16"
+                        android:text="购买日期"
+                        android:textColor="#274335"
+                        android:textSize="@dimen/x24" />
+
+                    <TextView
+                        android:id="@+id/tv_buySeven"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/tv_buySix"
+                        android:layout_marginTop="@dimen/y16"
+                        android:text="备注"
+                        android:textColor="#274335"
+                        android:textSize="@dimen/x24" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_give"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textColor="#274335"
+                    android:layout_marginTop="@dimen/y24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/x32"
+                    android:text="赠送记录"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_give"
+                    android:layout_marginTop="@dimen/y24"
+                    android:padding="@dimen/x24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_giveOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="购买门店"
+                        android:textColor="#274335"
+                        android:textSize="@dimen/x24" />
+
+                    <TextView
+                        android:id="@+id/tv_giveTwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_giveOne"
+                        android:layout_marginTop="@dimen/y16"
+                        android:text="购买日期"
+                        android:textColor="#274335"
+                        android:textSize="@dimen/x24" />
+
+                    <TextView
+                        android:id="@+id/tv_giveThree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_giveTwo"
+                        android:layout_marginTop="@dimen/y16"
+                        android:text="备注"
+                        android:textColor="#274335"
+                        android:textSize="@dimen/x24" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_repayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textColor="#274335"
+                    android:layout_marginTop="@dimen/y24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/x32"
+                    android:text="还款记录"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_repayment"
+                    android:layout_marginTop="@dimen/y24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_refund"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textColor="#274335"
+                    android:layout_marginTop="@dimen/y24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/x32"
+                    android:text="退款记录"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_refund"
+                    android:layout_marginTop="@dimen/y24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_consume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textColor="#274335"
+                    android:layout_marginTop="@dimen/y24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/x32"
+                    android:text="耗卡记录"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_consume"
+                    android:layout_marginTop="@dimen/y24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

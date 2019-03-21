@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/totalDiagram"
+    android:background="@color/main_bg_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_start"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="@dimen/y25"
+                android:paddingTop="@dimen/y25"
+                android:text="开始时间"
+                android:textColor="#FF1C1C1C"
+                android:textSize="@dimen/x28" />
+
+            <ImageView
+                android:layout_width="@dimen/x16"
+                android:layout_height="@dimen/y16"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x32"
+                android:layout_toRightOf="@+id/tv_start"
+                android:src="@drawable/triangle_down" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="match_parent"
+            android:background="#F5F5F5"
+            android:drawingCacheQuality="low" />
+
+        <RelativeLayout
+            android:id="@+id/rl_end"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="@dimen/y25"
+                android:paddingTop="@dimen/y25"
+                android:text="结束时间"
+                android:textColor="#FF1C1C1C"
+                android:textSize="@dimen/x28" />
+
+            <ImageView
+                android:layout_width="@dimen/x16"
+                android:layout_height="@dimen/y16"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x32"
+                android:layout_toRightOf="@+id/tv_end"
+                android:src="@drawable/triangle_down" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <com.ajguan.library.EasyRefreshLayout
+        android:id="@+id/easylayout"
+        android:layout_below="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_analysis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            tools:listitem="@layout/item_analysis" />
+
+    </com.ajguan.library.EasyRefreshLayout>
+
+</LinearLayout>

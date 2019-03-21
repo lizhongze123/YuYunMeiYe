@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_bg_gray"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/tv_one"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="编号"
+        android:textColor="@color/gray_66"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_two"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="姓名"
+        android:textColor="@color/gray_66"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_three"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="人次"
+        android:textColor="@color/gray_66"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_four"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="人数"
+        android:textColor="@color/gray_66"
+        android:textSize="12sp" />
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_five"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="手工费"
+        android:textColor="@color/gray_66"
+        android:textSize="12sp" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_six"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="手工费"
+        android:textColor="@color/gray_66"
+        android:textSize="12sp" />
+
+</LinearLayout>

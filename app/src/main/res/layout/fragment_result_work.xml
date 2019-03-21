@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line">
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x24"
+            android:layout_marginRight="@dimen/x24"
+            android:layout_toLeftOf="@+id/rl_filter"
+            android:paddingBottom="@dimen/y25"
+            android:paddingTop="@dimen/y25"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:text="全部数据"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <LinearLayout
+            android:id="@+id/rl_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/x25"
+            android:paddingLeft="@dimen/x10"
+            android:paddingTop="@dimen/y25"
+            android:layout_marginRight="@dimen/x28">
+
+            <TextView
+                android:id="@+id/tv_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更多筛选"
+                android:textColor="#7a7a7a"
+                android:textSize="@dimen/x28" />
+
+            <ImageView
+                android:layout_width="@dimen/x26"
+                android:layout_height="@dimen/y27"
+                android:layout_marginLeft="@dimen/x12"
+                android:layout_toRightOf="@+id/tv_filter"
+                android:src="@drawable/ic_filter_three" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:background="#f5f5f5"
+        android:drawingCacheQuality="low"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y10"/>
+
+    <com.ajguan.library.EasyRefreshLayout
+        android:id="@+id/easylayout"
+        android:paddingLeft="@dimen/x24"
+        android:paddingRight="@dimen/x24"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_header"
+            android:visibility="visible"
+            tools:listitem="@layout/item_moments" />
+
+    </com.ajguan.library.EasyRefreshLayout>
+
+    <cn.yuyun.yymy.view.EmptyLayout
+        android:id="@+id/empty"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

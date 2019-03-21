@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/main_bg_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_filter"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_start"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_start"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="开始时间"
+                android:paddingBottom="@dimen/y25"
+                android:paddingTop="@dimen/y25"
+                android:textColor="#FF1C1C1C"
+                android:textSize="@dimen/x28" />
+
+            <ImageView
+                android:layout_width="@dimen/x16"
+                android:layout_height="@dimen/y16"
+                android:layout_marginLeft="@dimen/x32"
+                android:layout_toRightOf="@+id/tv_start"
+                android:layout_centerVertical="true"
+                android:src="@drawable/triangle_down"/>
+
+        </RelativeLayout>
+
+        <View
+            android:background="@color/main_bg_gray"
+            android:drawingCacheQuality="low"
+            android:layout_width="@dimen/x1"
+            android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_end"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_end"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="结束时间"
+                android:paddingBottom="@dimen/y25"
+                android:paddingTop="@dimen/y25"
+                android:textColor="#FF1C1C1C"
+                android:textSize="@dimen/x28" />
+
+            <ImageView
+                android:layout_width="@dimen/x16"
+                android:layout_height="@dimen/y16"
+                android:layout_marginLeft="@dimen/x32"
+                android:layout_toRightOf="@+id/tv_end"
+                android:layout_centerVertical="true"
+                android:src="@drawable/triangle_down"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:background="@color/main_bg_gray"
+        android:layout_below="@+id/ll_filter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y10"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_empty"
+        android:visibility="gone"
+        android:layout_below="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg_gray">
+
+        <ImageView
+            android:id="@+id/img_error_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/data_null"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <com.ajguan.library.EasyRefreshLayout
+        android:id="@+id/easylayout"
+        android:layout_above="@+id/tv_amount"
+        android:layout_below="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_record"/>
+
+    </com.ajguan.library.EasyRefreshLayout>
+
+    <TextView
+        android:id="@+id/tv_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:text="总计：0.00"
+        android:gravity="center"
+        android:paddingBottom="@dimen/x24"
+        android:paddingTop="@dimen/x24"
+        android:textColor="@color/white"
+        android:textSize="@dimen/x32"/>
+
+</RelativeLayout>

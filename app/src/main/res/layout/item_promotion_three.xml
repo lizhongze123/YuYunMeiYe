@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="8dp"
+    android:background="@drawable/shape_white_corner_item_bg_selector"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/gray_33"
+        tools:text="我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_pic_one"
+            android:layout_marginTop="8dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/item_pic"
+            android:src="@color/loadding_img_bg"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/iv_pic_two"
+            android:layout_marginTop="8dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/item_pic"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:src="@color/loadding_img_bg"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/iv_pic_three"
+            android:layout_marginTop="8dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/item_pic"
+            android:src="@color/loadding_img_bg"
+            android:scaleType="centerCrop" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/action_user_avatar"
+            android:layout_height="@dimen/action_user_avatar"
+            android:src="@drawable/avatar_default_female" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_99"
+            android:textSize="12sp"
+            android:lines="1"
+            android:layout_marginLeft="5dp"
+            tools:text="用户名"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_99"
+            android:textSize="10sp"
+            android:lines="1"
+            android:layout_marginLeft="10dp"
+            tools:text="2013-02-02"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="8dp"
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/gray_dd"
+        android:drawingCacheQuality="low" />
+
+</LinearLayout>

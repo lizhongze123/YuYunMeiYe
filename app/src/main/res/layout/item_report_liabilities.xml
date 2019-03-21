@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y100"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="@dimen/x180"
+            android:layout_height="match_parent"
+            tools:text="很大集团"
+            android:textSize="@dimen/x22"
+            android:textColor="@color/text_gray"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_two"
+            android:layout_width="@dimen/x180"
+            android:layout_height="match_parent"
+            tools:text="桃子"
+            android:maxLines="1"
+            android:textSize="@dimen/x22"
+            android:textColor="@color/text_gray"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_three"
+            android:layout_width="@dimen/x180"
+            android:layout_height="match_parent"
+            tools:text="122121"
+            android:textSize="@dimen/x22"
+            android:textColor="@color/text_gray"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

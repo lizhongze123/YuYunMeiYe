@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_submit"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f8f8f8"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请假类型"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/x28" />
+
+                <TextView
+                    android:id="@+id/tv_reason"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x8"
+                    android:layout_marginRight="@dimen/x8"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:hint="请选择"
+                    android:paddingBottom="@dimen/y20"
+                    android:paddingTop="@dimen/y20"
+                    android:textColor="#3f3f3f"
+                    android:textColorHint="#cccccc"
+                    android:textSize="@dimen/x28" />
+
+                <ImageView
+                    android:layout_width="@dimen/x32"
+                    android:layout_height="@dimen/x32"
+                    android:src="@drawable/more_right_three" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y24"
+                android:drawingCacheQuality="low"
+                android:textColor="#f8f8f8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开始时间"
+                    android:textColor="#7a7a7a"
+                    android:textSize="@dimen/x28" />
+
+                <TextView
+                    android:id="@+id/tv_timeStart"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x8"
+                    android:layout_marginRight="@dimen/x8"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:hint="请选择"
+                    android:paddingBottom="@dimen/y20"
+                    android:paddingTop="@dimen/y20"
+                    android:textColor="#3f3f3f"
+                    android:textColorHint="#cccccc"
+                    android:textSize="@dimen/x28" />
+
+                <ImageView
+                    android:layout_width="@dimen/x32"
+                    android:layout_height="@dimen/x32"
+                    android:src="@drawable/more_right_three" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:background="@color/white"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/y2"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="结束时间"
+                    android:textColor="#7a7a7a"
+                    android:textSize="@dimen/x28" />
+
+                <TextView
+                    android:id="@+id/tv_timeEnd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x8"
+                    android:layout_marginRight="@dimen/x8"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:hint="请选择"
+                    android:paddingBottom="@dimen/y20"
+                    android:paddingTop="@dimen/y20"
+                    android:textColor="#3f3f3f"
+                    android:textColorHint="#cccccc"
+                    android:textSize="@dimen/x28" />
+
+                <ImageView
+                    android:layout_width="@dimen/x32"
+                    android:layout_height="@dimen/x32"
+                    android:src="@drawable/more_right_three" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:background="@color/white"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/y2"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="时长(天)"
+                    android:textColor="#7a7a7a"
+                    android:textSize="@dimen/x28" />
+
+                <TextView
+                    android:id="@+id/tv_timesLong"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x8"
+                    android:layout_marginRight="@dimen/x8"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:hint="请选择"
+                    android:paddingBottom="@dimen/y20"
+                    android:paddingTop="@dimen/y20"
+                    android:textColor="#3f3f3f"
+                    android:textColorHint="#cccccc"
+                    android:textSize="@dimen/x28" />
+
+                <ImageView
+                    android:layout_width="@dimen/x32"
+                    android:layout_height="@dimen/x32"
+                    android:src="@drawable/more_right_three" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_content"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y360"
+                android:layout_marginTop="@dimen/y24"
+                android:background="#FFFFFF"
+                android:gravity="start"
+                android:hint="请输入请假原因(必填)"
+                android:maxHeight="@dimen/y360"
+                android:paddingBottom="@dimen/x24"
+                android:paddingEnd="@dimen/x24"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24"
+                android:paddingStart="@dimen/x24"
+                android:paddingTop="@dimen/x24"
+                android:textColorHint="#cccccc"
+                android:textColor="#555555"
+                android:textSize="@dimen/x28" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y24"
+                android:layout_marginBottom="@dimen/x24"
+                android:background="@color/white">
+
+                <cn.yuyun.yymy.view.selectpic.SelectPicView
+                    android:id="@+id/selectPicView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_wallDesc"
+                    tools:listitem="@layout/item_pic_wall" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y60"
+                android:text="审批人(点击头像可删除)"
+                android:paddingLeft="@dimen/x24"
+                android:textColor="@color/text_gray"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/x24" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/x24">
+
+                <cn.yuyun.yymy.ui.home.work.SelectPeopleView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    tools:listitem="@layout/item_pic_del" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

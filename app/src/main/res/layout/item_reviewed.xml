@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:background="@drawable/common_selector_list_view_item"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/gray_33"
+            android:text="用户名的申请"/>
+
+        <LinearLayout
+            android:id="@+id/ll_type"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tv_userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_66"
+                android:textSize="12sp"
+                android:text="类型："/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_66"
+                android:textSize="12sp"
+                android:text="调休假"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/ll_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_66"
+                android:textSize="12sp"
+                android:text="请假天数："/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_66"
+                android:textSize="12sp"
+                android:text="1天"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_66"
+                android:textSize="12sp"
+                android:text="2018年1月27日08:56"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/text_red"
+            android:text="审核中"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

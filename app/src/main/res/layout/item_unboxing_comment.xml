@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/y16"
+    android:paddingLeft="@dimen/x24"
+    android:paddingRight="@dimen/x24">
+
+    <RelativeLayout
+        android:id="@+id/rl_avatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_likeDesc"
+            android:layout_width="@dimen/x24"
+            android:layout_height="@dimen/x24"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x16"
+            android:visibility="gone"
+            android:src="@drawable/icon_feedback"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_img"
+            android:layout_toRightOf="@+id/iv_likeDesc"
+            android:layout_width="@dimen/x48"
+            android:layout_height="@dimen/x48"
+            android:src="@drawable/avatar_default_female" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/profile_name"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/rl_avatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="红楼"
+        android:layout_marginTop="@dimen/y6"
+        android:textColor="#576587"
+        android:layout_marginLeft="@dimen/x16"
+        android:textSize="@dimen/x28" />
+
+    <TextView
+        android:id="@+id/profile_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y10"
+        tools:text="16分钟前"
+        android:layout_alignParentRight="true"
+        android:textColor="#7a7a7a"
+        android:textSize="@dimen/x20" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_marginLeft="@dimen/x16"
+        android:layout_toRightOf="@+id/rl_avatar"
+        android:layout_below="@+id/rl_avatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="红红楼红楼红楼红楼红楼红楼楼红楼红楼红楼红楼红楼红楼红楼红楼红楼"
+        android:textColor="#3f3f3f"
+        android:textSize="@dimen/x28" />
+
+    <View
+        android:layout_marginTop="@dimen/y8"
+        android:layout_below="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:drawingCacheQuality="low"
+        android:background="#e6e6e6" />
+
+</RelativeLayout>

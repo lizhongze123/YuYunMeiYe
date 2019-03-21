@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_selector_list_view_item"
+        android:padding="10dp">
+
+        <cn.yuyun.yymy.view.RoundAngleImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/x80"
+            android:layout_height="@dimen/x80"
+            android:layout_marginRight="@dimen/x16"
+            android:layout_alignParentLeft="true"
+            android:src="@color/loadding_img_bg" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_avatar"
+            android:textColor="#274335"
+            android:textSize="@dimen/x28"
+            tools:text="贵妃七项" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_avatar"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="@dimen/y8"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="类型" />
+
+        <TextView
+            android:id="@+id/tv_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_type"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="@dimen/y8"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            android:layout_marginLeft="@dimen/x15"
+            tools:text="品牌" />
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/x24"
+            android:textColor="#274335"
+            tools:text="*2" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/x24"
+        android:gravity="center"
+        android:textColor="#3f3f3f"
+        android:textSize="@dimen/x30"
+        android:text="该商品已下架"/>
+
+</RelativeLayout>

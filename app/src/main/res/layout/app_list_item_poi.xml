@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ensure"
+            android:layout_toLeftOf="@+id/ensure"
+            android:maxLines="1"
+            android:text="5555"
+            android:textColor="#333333"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:text="5555"
+            android:id="@+id/addressDesc"
+            android:layout_below="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/ensure"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="2dp"
+            android:maxLines="1"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/ensure"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/common_selector_green_button"
+            android:text="确定"
+            android:textColor="#ffffff"
+            android:textSize="13dp" />
+    </RelativeLayout>
+
+</LinearLayout>

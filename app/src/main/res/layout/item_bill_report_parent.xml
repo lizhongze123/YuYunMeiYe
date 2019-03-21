@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/x32"
+    android:layout_marginRight="@dimen/x32"
+    android:layout_marginTop="@dimen/x32"
+    android:background="@drawable/shape_bill_type_bottom_bg"
+    android:elevation="@dimen/x10"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="@dimen/x180"
+            android:layout_height="@dimen/y85"
+            android:layout_marginLeft="@dimen/x32"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="赠送"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x32" />
+
+        <LinearLayout
+            android:id="@+id/ll_expand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x16"
+                android:layout_toLeftOf="@+id/iv_expand"
+                android:text="更多"
+                android:textColor="#c0c0c0"
+                android:textSize="@dimen/x28" />
+
+            <ImageView
+                android:id="@+id/iv_expand"
+                android:layout_width="@dimen/x28"
+                android:layout_height="@dimen/y16"
+                android:src="@drawable/ic_expand" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

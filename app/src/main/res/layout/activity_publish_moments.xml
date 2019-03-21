@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y88"
+        android:background="@drawable/shape_work_top_bg"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/x92"
+            android:layout_height="@dimen/x88"
+            android:layout_centerVertical="true"
+            android:background="@drawable/common_selector_white_default"
+            android:src="@drawable/back_white"
+            android:paddingTop="@dimen/y22"
+            android:paddingBottom="@dimen/y22"
+            android:paddingLeft="@dimen/x24"
+            android:paddingRight="@dimen/x24"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:singleLine="true"
+            android:text="添加汇报"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/x36" />
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/common_selector_white_default"
+            android:paddingRight="@dimen/x24"
+            android:paddingLeft="@dimen/x24"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="提交"
+            android:textColor="#fff"
+            android:textSize="@dimen/x28" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/y18"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/x24"
+                android:paddingBottom="@dimen/x24"
+                android:paddingRight="@dimen/x24">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#7a7a7a"
+                    android:text="汇报类型"
+                    android:layout_marginLeft="@dimen/x24"
+                    android:textSize="@dimen/x28" />
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:layout_height="wrap_content"
+                    android:textColor="#3f3f3f"
+                    android:text="日报"
+                    android:layout_marginRight="@dimen/x8"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/x28" />
+
+                <ImageView
+                    android:src="@drawable/more_right_three"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/x32"
+                    android:layout_height="@dimen/x32" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y24"
+                android:drawingCacheQuality="low"
+                android:background="#f5f5f5" />
+
+            <EditText
+                android:id="@+id/et_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="top|left"
+                android:hint="请输入你今天的工作情况（必填）"
+                android:minHeight="@dimen/y340"
+                android:padding="@dimen/x20"
+                android:textColor="@color/gray_66"
+                android:textSize="@dimen/x28" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y24"
+                android:drawingCacheQuality="low"
+                android:background="#f5f5f5" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/x21"
+                android:paddingRight="@dimen/x21"
+                android:layout_marginTop="@dimen/y21"
+                android:layout_marginBottom="@dimen/y21">
+
+                <cn.yuyun.yymy.view.selectpic.SelectPicView
+                    android:id="@+id/selectPicView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/item_pic_wall" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f5f5f5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/y15"
+                    android:paddingLeft="@dimen/x24"
+                    android:paddingRight="@dimen/x24"
+                    android:paddingTop="@dimen/y15">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="审批人  (点击头像方可删除)"
+                        android:textColor="#3f3f3f"
+                        android:textSize="@dimen/x24" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox"
+                        android:layout_width="@dimen/x35"
+                        android:layout_height="@dimen/x35"
+                        android:layout_marginRight="@dimen/x10"
+                        android:background="@drawable/bg_checkbox_green"
+                        android:button="@null" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#f5f5f5"
+                        android:text="所有人可见"
+                        android:textColor="#7a7a7a"
+                        android:textSize="@dimen/x20" />
+
+                </LinearLayout>
+
+                <cn.yuyun.yymy.ui.home.work.SelectPeopleView
+                    android:id="@+id/selectPeopleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/white"
+                    tools:listitem="@layout/item_pic_del" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

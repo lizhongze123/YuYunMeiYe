@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4F5F9">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <RelativeLayout
+                android:id="@+id/rl_top"
+                android:layout_marginLeft="@dimen/x24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="@dimen/x48"
+                    android:layout_height="@dimen/x48"
+                    tools:src="@drawable/avatar_default_female" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_toRightOf="@+id/iv_avatar"
+                    android:textColor="#274335"
+                    android:textSize="@dimen/x28"
+                    android:textStyle="bold"
+                    android:maxEms="4"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    tools:text="会员名dd教" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_project"
+                android:layout_marginLeft="@dimen/x24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_top"
+                android:layout_marginTop="@dimen/y8"
+                android:textColor="#3f3f3f"
+                android:textSize="@dimen/x20"
+                android:visibility="gone"
+                tools:text="我是项目" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_result"
+            android:layout_width="@dimen/x100"
+            android:layout_height="@dimen/y80"
+            android:layout_marginTop="@dimen/y16"
+            android:layout_marginRight="@dimen/x8"
+            android:layout_alignParentRight="true"
+            android:visibility="visible"
+            tools:src="@drawable/approval_agree" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

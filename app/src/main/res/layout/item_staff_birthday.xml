@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/x28"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/x160"
+            android:layout_height="@dimen/x160"
+            android:src="@drawable/avatar_default_female"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            tools:text="名字啊啊啊啊啊啊啊啊啊啊"
+            android:textSize="@dimen/x28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxEms="7"
+            android:textColor="#274335"
+            android:layout_marginTop="@dimen/y16"
+            android:layout_below="@+id/iv_avatar" />
+
+        <TextView
+            android:id="@+id/tv_birthday"
+            tools:text="生日"
+            android:textSize="@dimen/x28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_gray"
+            android:layout_marginTop="@dimen/y10"
+            android:layout_below="@+id/tv_name" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

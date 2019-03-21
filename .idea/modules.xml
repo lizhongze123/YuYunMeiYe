@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/YuYunMeiYe.iml" filepath="$PROJECT_DIR$/YuYunMeiYe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ext_amap/ext_amap.iml" filepath="$PROJECT_DIR$/ext_amap/ext_amap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ext_dialog/ext_dialog.iml" filepath="$PROJECT_DIR$/ext_dialog/ext_dialog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ext_photo/ext_photo.iml" filepath="$PROJECT_DIR$/ext_photo/ext_photo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ext_pickview/ext_pickview.iml" filepath="$PROJECT_DIR$/ext_pickview/ext_pickview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ext_utils/ext_utils.iml" filepath="$PROJECT_DIR$/ext_utils/ext_utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/http-module/http-module.iml" filepath="$PROJECT_DIR$/http-module/http-module.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="@dimen/y2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_selector_list_view_item"
+        android:paddingLeft="@dimen/x32"
+        android:paddingRight="@dimen/x32"
+        android:paddingTop="@dimen/y18"
+        android:paddingBottom="@dimen/y18">
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/x120"
+            android:layout_height="@dimen/x120"
+            android:src="@drawable/default_store"
+            android:layout_alignParentLeft="true"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x16"
+            android:layout_toRightOf="@id/iv_avatar">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户名"
+                android:singleLine="true"
+                android:maxEms="8"
+                android:ellipsize="marquee"
+                android:textColor="#1C1C1C"
+                android:textSize="@dimen/x28" />
+
+            <TextView
+                android:id="@+id/tv_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name"
+                android:layout_marginTop="@dimen/y8"
+                android:text="负责人"
+                android:textColor="#7A7A7A"
+                android:textSize="@dimen/x24" />
+
+            <TextView
+                android:id="@+id/tv_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_one"
+                android:layout_marginTop="@dimen/y8"
+                android:text="电话"
+                android:textColor="#7A7A7A"
+                android:textSize="@dimen/x24" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_alignParentRight="true"
+            android:textColor="#7a7a7a"
+            android:textSize="@dimen/x20"
+            tools:text="当前门店" />
+
+    </RelativeLayout>
+
+</LinearLayout>

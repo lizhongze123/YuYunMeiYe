@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="1dp"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:background="@drawable/common_selector_default">
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            tools:text="桃子"
+            android:textSize="12sp"
+            android:textColor="@color/gray_66"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            tools:text="桃子"
+            android:textSize="12sp"
+            android:textColor="@color/gray_66"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            tools:text="很大集团"
+            android:visibility="gone"
+            android:textSize="12sp"
+            android:textColor="@color/gray_66"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_two"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            tools:text="桃子"
+            android:maxLines="1"
+            android:textSize="12sp"
+            android:textColor="@color/gray_66"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_three"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            tools:text="122121"
+            android:textSize="12sp"
+            android:textColor="@color/gray_66"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_four"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            tools:text="25252"
+            android:textSize="12sp"
+            android:textColor="@color/gray_66"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_five"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            tools:text="桃子"
+            android:textSize="12sp"
+            android:textColor="@color/gray_66"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_six"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            tools:text="桃子"
+            android:textSize="12sp"
+            android:textColor="@color/gray_66"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

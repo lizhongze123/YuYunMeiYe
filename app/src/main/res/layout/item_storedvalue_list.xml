@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_selector_list_view_item"
+        android:paddingLeft="@dimen/x32"
+        android:paddingRight="@dimen/x32"
+        android:paddingTop="@dimen/y18"
+        android:paddingBottom="@dimen/y18">
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:textSize="@dimen/x22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:lines="1"
+            android:textColor="#274335"
+            android:ellipsize="end"
+            tools:text="原有储值余额" />
+
+        <TextView
+            android:id="@+id/tv_two"
+            android:textSize="@dimen/x22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:lines="1"
+            android:textColor="#274335"
+            android:ellipsize="end"
+            tools:text="现有储值余额" />
+
+        <TextView
+            android:id="@+id/tv_three"
+            android:textSize="@dimen/x22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_one"
+            android:layout_marginTop="@dimen/y16"
+            android:lines="1"
+            android:textColor="#274335"
+            android:ellipsize="end"
+            tools:text="单据类型" />
+
+        <TextView
+            android:id="@+id/tv_four"
+            android:textSize="@dimen/x22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_two"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/y16"
+            android:lines="1"
+            android:textColor="#274335"
+            android:ellipsize="end"
+            tools:text="储值变更" />
+
+        <TextView
+            android:id="@+id/tv_five"
+            android:textSize="@dimen/x22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_three"
+            android:layout_marginTop="@dimen/y16"
+            android:lines="1"
+            android:textColor="#274335"
+            android:ellipsize="end"
+            tools:text="单据类型" />
+
+
+        <TextView
+            android:id="@+id/tv_six"
+            android:textSize="@dimen/x22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_five"
+            android:layout_marginTop="@dimen/y16"
+            android:lines="1"
+            android:textColor="#274335"
+            android:ellipsize="end"
+            tools:text="单据类型" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/separation_line"
+        android:layout_below="@+id/rl" />
+
+</RelativeLayout>

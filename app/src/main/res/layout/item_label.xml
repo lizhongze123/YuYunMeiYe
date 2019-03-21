@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_margin="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/text_red"
+    android:id="@+id/rl">
+
+    <TextView
+        android:id="@+id/tv_label"
+        android:text="我是标签我是标签我是标签我是标签我是标签我是标签我是标签"
+        android:textSize="14sp"
+        android:paddingLeft="10dp"
+        android:layout_toLeftOf="@id/tv_del"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_del"
+        android:text="×"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

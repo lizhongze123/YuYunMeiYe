@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/totalDiagram"
+    android:background="@color/main_bg_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:background="@drawable/common_selector_list_view_item"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="#274335"
+            android:textSize="@dimen/x28"
+            tools:text="贵妃七项"/>
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            android:layout_alignParentLeft="true"
+            android:text="仓库名称:"/>
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/text_gray"
+            android:textSize="12sp"
+            tools:text="可使用"/>
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/x24"
+            android:textColor="#274335"
+            android:text="库存数量:"/>
+
+    </RelativeLayout>
+
+    <com.ajguan.library.EasyRefreshLayout
+        android:id="@+id/easylayout"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_analysis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            tools:listitem="@layout/item_stock" />
+
+    </com.ajguan.library.EasyRefreshLayout>
+
+</LinearLayout>

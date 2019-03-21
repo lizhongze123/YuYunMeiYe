@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg_gray"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <ScrollView
+                android:id="@+id/tools_scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:background="@color/white"
+                android:fadingEdge="none"
+                android:scrollbars="none">
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rb1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/time_radio_bg"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:text="今天"
+                        android:textColor="@drawable/people_radio_text" />
+
+                    <RadioButton
+                        android:id="@+id/rb2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/time_radio_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:text="明天"
+                        android:textColor="@drawable/people_radio_text" />
+
+                    <RadioButton
+                        android:id="@+id/rb3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/time_radio_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:text="02月02日"
+                        android:textColor="@drawable/people_radio_text" />
+
+                    <RadioButton
+                        android:id="@+id/rb4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/time_radio_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:text="明天"
+                        android:textColor="@drawable/people_radio_text" />
+
+                    <RadioButton
+                        android:id="@+id/rb5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/time_radio_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:text="明天"
+                        android:textColor="@drawable/people_radio_text" />
+
+                    <RadioButton
+                        android:id="@+id/rb6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/time_radio_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:text="明天"
+                        android:textColor="@drawable/people_radio_text" />
+
+                    <RadioButton
+                        android:id="@+id/rb7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/time_radio_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:text="明天"
+                        android:textColor="@drawable/people_radio_text" />
+
+                </RadioGroup>
+
+            </ScrollView>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fadingEdge="none"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/goods"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_am"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1dp"
+                            android:background="@color/white"
+                            android:padding="10dp" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_one"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            tools:listitem="@layout/item_data" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_pm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_pm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="1dp"
+                            android:background="@color/white"
+                            android:padding="10dp" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_two"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            tools:listitem="@layout/item_time" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

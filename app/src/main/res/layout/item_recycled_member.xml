@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/y2"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!-- 这个TextView就是显示字母的 -->
+        <TextView
+            android:id="@+id/tv_lv_item_tag"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="@color/main_bg_gray"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="Z"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingTop="@dimen/y16"
+            android:paddingBottom="@dimen/y16"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20">
+
+            <cn.yuyun.yymy.view.RoundAngleImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="@dimen/x80"
+                android:layout_height="@dimen/y80"
+                android:layout_marginRight="@dimen/x16"
+                android:src="@drawable/avatar_default_female"
+                android:scaleType="centerCrop" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_avatar">
+
+                <LinearLayout
+                    android:id="@+id/ll_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_userName"
+                        android:singleLine="true"
+                        android:ellipsize="marquee"
+                        android:maxEms="5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray_33"
+                        android:textSize="@dimen/x28"
+                        tools:text="用户名" />
+
+                    <TextView
+                        android:id="@+id/tv_vip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv_userName"
+                        android:layout_marginLeft="@dimen/x8"
+                        android:maxLines="1"
+                        android:textColor="#FF9B59"
+                        android:textSize="@dimen/x20"
+                        tools:text="钻石" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_user"
+                    android:layout_marginTop="5dp"
+                    android:text="上次到店:"
+                    android:textColor="#7a7a7a"
+                    android:textSize="@dimen/x24" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_user"
+                    android:layout_marginTop="@dimen/y6"
+                    android:layout_toRightOf="@id/tv_address"
+                    android:textColor="#7a7a7a"
+                    android:textSize="@dimen/x24"
+                    tools:text="8小时前" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

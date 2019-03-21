@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="@dimen/y2"
+    android:background="@drawable/common_selector_list_view_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/x32"
+        android:paddingRight="@dimen/x32"
+        android:paddingTop="@dimen/y18"
+        android:paddingBottom="@dimen/y18">
+
+        <CheckBox
+            android:id="@+id/cb"
+            android:layout_width="@dimen/x35"
+            android:layout_height="@dimen/x35"
+            android:layout_marginRight="@dimen/x24"
+            android:layout_alignParentLeft="true"
+            android:visibility="gone"
+            android:button="@null"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/bg_checkbox_blue"
+            android:layout_centerVertical="true" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/x80"
+            android:layout_height="@dimen/y80"
+            android:layout_toRightOf="@+id/cb"
+            android:layout_marginRight="@dimen/x16"
+            android:src="@drawable/avatar_default_female"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_avatar">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户名"
+                android:singleLine="true"
+                android:maxEms="8"
+                android:ellipsize="marquee"
+                android:textColor="#274335"
+                android:textSize="@dimen/x28" />
+
+            <TextView
+                android:id="@+id/tv_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name"
+                android:layout_marginTop="@dimen/y8"
+                android:text="账号:"
+                android:textColor="#7A7A7A"
+                android:textSize="@dimen/x22" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_select"
+            tools:visibility="visible"
+            android:visibility="gone"
+            android:layout_width="@dimen/x35"
+            android:layout_height="@dimen/x35"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_affirm_selected" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg_gray"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/x24">
+
+        <TextView
+            android:id="@+id/tv_toggleDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x8"
+            android:text="是否开启补单"
+            android:textColor="#1c1c1c"
+            android:textSize="@dimen/x24" />
+
+        <cn.yuyun.yymy.view.ToggleButton
+            android:id="@+id/toggleButton"
+            style="@style/option_item_toggleButton"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_toggleDesc" />
+
+        <TextView
+            android:id="@+id/tv_createTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/y36"
+            android:paddingLeft="@dimen/x24"
+            android:paddingRight="@dimen/x24"
+            android:paddingTop="@dimen/y36"
+            android:textColor="#1c1c1c"
+            android:textSize="@dimen/x28"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            tools:text="dddd" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/line"
+        android:layout_below="@+id/rl_top"
+        tools:listitem="@layout/item_cashier_buy_list" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:layout_above="@+id/rl_bottom"
+        android:background="#f2f2f2"
+        android:drawingCacheQuality="low" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y98"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/x24">
+
+        <TextView
+            android:id="@+id/tv_amountDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x8"
+            android:text="总金额:"
+            android:textColor="#3f3f3f"
+            android:textSize="@dimen/x24" />
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_amountDesc"
+            android:text="0.00"
+            android:textColor="#FC6B6B"
+            android:textSize="@dimen/x32"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_nextStep"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x54"
+            android:paddingRight="@dimen/x54"
+            android:text="下一步"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/x32" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

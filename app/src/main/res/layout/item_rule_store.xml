@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/x160"
+        android:layout_height="@dimen/x160"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/default_store"
+        android:padding="4dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/item_tips"
+        android:layout_width="@dimen/x38"
+        android:layout_height="@dimen/x38"
+        android:layout_alignRight="@+id/iv_avatar"
+        android:background="@drawable/icon_del"
+        android:gravity="center"
+        android:focusable="false"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        tools:text="名字啊啊啊啊啊啊啊啊啊啊"
+        android:textSize="@dimen/x20"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:maxEms="4"
+        android:layout_marginTop="@dimen/x8"
+        android:layout_below="@+id/iv_avatar" />
+
+</RelativeLayout>

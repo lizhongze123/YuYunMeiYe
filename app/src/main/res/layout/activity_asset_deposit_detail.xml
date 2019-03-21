@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_result"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y90"
+                android:paddingLeft="@dimen/x32"
+                android:paddingRight="@dimen/x32"
+                android:background="@drawable/selector_item_default"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:text="寄存编号"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/x24" />
+
+                <TextView
+                    android:id="@+id/tv_one"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/text_black"
+                    android:layout_height="wrap_content"
+                    tools:text="HDJDHDJDHDJDHJ"
+                    android:textSize="@dimen/x28"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y2"
+                android:background="#f5f5f5"
+                android:layout_marginLeft="@dimen/x32" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y90"
+                android:paddingLeft="@dimen/x32"
+                android:paddingRight="@dimen/x32"
+                android:background="@drawable/selector_item_default"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:text="会员名称"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/x24"/>
+
+                <TextView
+                    android:id="@+id/tv_two"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/text_black"
+                    android:layout_height="wrap_content"
+                    tools:text="HDJDHDJDHDJDHJ"
+                    android:textSize="@dimen/x28"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y2"
+                android:background="#f5f5f5"
+                android:layout_marginLeft="@dimen/x32" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y90"
+                android:paddingLeft="@dimen/x32"
+                android:paddingRight="@dimen/x32"
+                android:background="@drawable/selector_item_default"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:text="物品名称"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/x24" />
+
+                <TextView
+                    android:id="@+id/tv_three"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/text_black"
+                    android:layout_height="wrap_content"
+                    tools:text="HDJDHDJDHDJDHJ"
+                    android:textSize="@dimen/x28"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y2"
+                android:background="#f5f5f5"
+                android:layout_marginLeft="@dimen/x32" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y90"
+                android:paddingLeft="@dimen/x32"
+                android:paddingRight="@dimen/x32"
+                android:background="@drawable/selector_item_default"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:text="物品价值"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/x24" />
+
+                <TextView
+                    android:id="@+id/tv_four"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/text_black"
+                    android:layout_height="wrap_content"
+                    tools:text="HDJDHDJDHDJDHJ"
+                    android:textSize="@dimen/x28"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y2"
+                android:background="#f5f5f5"
+                android:layout_marginLeft="@dimen/x32" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#f5f5f5"
+                android:layout_height="@dimen/y10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y90"
+                android:paddingLeft="@dimen/x32"
+                android:paddingRight="@dimen/x32"
+                android:background="@drawable/selector_item_default"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:text="寄存时间"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/x24" />
+
+                <TextView
+                    android:id="@+id/tv_five"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/text_black"
+                    android:layout_height="wrap_content"
+                    tools:text="HDJDHDJDHDJDHJ"
+                    android:textSize="@dimen/x28"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#f5f5f5"
+                android:layout_height="@dimen/y2"
+                android:layout_marginLeft="@dimen/x32" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y90"
+                android:paddingLeft="@dimen/x32"
+                android:paddingRight="@dimen/x32"
+                android:background="@drawable/selector_item_default"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:text="预约取件时间"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/x24" />
+
+                <TextView
+                    android:id="@+id/tv_six"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/text_black"
+                    android:layout_height="wrap_content"
+                    tools:text="HDJDHDJDHDJDHJ"
+                    android:textSize="@dimen/x28"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#f5f5f5"
+                android:layout_height="@dimen/y2"
+                android:layout_marginLeft="@dimen/x32" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y90"
+                android:paddingLeft="@dimen/x32"
+                android:paddingRight="@dimen/x32"
+                android:background="@drawable/selector_item_default"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:text="实际取件时间"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/x24" />
+
+                <TextView
+                    android:id="@+id/tv_seven"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/text_black"
+                    android:layout_height="wrap_content"
+                    tools:text="HDJDHDJDHDJDHJ"
+                    android:textSize="@dimen/x28"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#f5f5f5"
+                android:layout_height="@dimen/y2"
+                android:layout_marginLeft="@dimen/x32" />
+
+            <TextView
+                android:text="寄存备注"
+                android:paddingLeft="@dimen/x32"
+                android:paddingRight="@dimen/x32"
+                android:paddingTop="@dimen/y25"
+                android:paddingBottom="@dimen/y25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/x24" />
+
+            <TextView
+                android:id="@+id/tv_twelve"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/x32"
+                android:paddingRight="@dimen/x32"
+                android:layout_marginBottom="@dimen/y25"
+                android:textColor="@color/text_black"
+                android:layout_height="wrap_content"
+                tools:text="HDJDHDJDHDJDHJ"
+                android:textSize="@dimen/x28"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y98"
+        android:layout_alignParentBottom="true"
+        android:background="#f5f5f5"
+        android:gravity="center"
+        android:textColor="@color/text_red"
+        android:textSize="@dimen/x36" />
+
+</RelativeLayout>

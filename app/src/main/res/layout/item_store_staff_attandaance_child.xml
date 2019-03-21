@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F8F6F6"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/y26"
+        android:paddingTop="@dimen/y26">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="迟到"
+            android:layout_marginLeft="@dimen/x24"
+            android:textColor="#274335"
+            android:textSize="@dimen/x28" />
+
+    </RelativeLayout>
+
+    <View
+        android:background="#D8D8D8"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"/>
+
+</LinearLayout>

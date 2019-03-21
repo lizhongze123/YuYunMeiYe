@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y64"
+            android:layout_toLeftOf="@+id/tv_cancel"
+            android:layout_marginLeft="@dimen/x24"
+            android:background="@drawable/shape_global_search"
+            android:layout_marginTop="@dimen/y12"
+            android:layout_marginBottom="@dimen/y12"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/x32"
+                android:layout_height="@dimen/x32"
+                android:layout_marginLeft="@dimen/x24"
+                android:layout_marginRight="@dimen/x8"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_search_one"/>
+
+            <cn.yuyun.yymy.view.EditTextWithDel
+                android:id="@+id/keyWord"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:layout_gravity="center_vertical"
+                android:imeOptions="actionSearch"
+                android:inputType="textCapWords"
+                android:singleLine="true"
+                android:background="@null"
+                android:textColorHint="#CCCCCC"
+                android:textColor="#3f3f3f"
+                android:textSize="@dimen/x28"
+                android:layout_marginRight="@dimen/x24"
+                android:paddingLeft="@dimen/x15"
+                android:hint="搜会员、门店、员工" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:background="@drawable/selector_item_default"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y64"
+            android:paddingLeft="@dimen/x24"
+            android:paddingRight="@dimen/x24"
+            android:layout_marginTop="@dimen/y12"
+            android:layout_marginBottom="@dimen/y12"
+            android:textColor="#3f3f3f"
+            android:gravity="center"
+            android:textSize="@dimen/x28"
+            android:text="取消"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/recyclerView"
+        android:layout_below="@+id/rl_top"
+        tools:listitem="@layout/item_contact"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:visibility="visible"
+        android:layout_below="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y80"
+            android:background="#ffffff"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@drawable/time_radio_bg"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="门店"
+                android:textSize="@dimen/x32"
+                android:textColor="@drawable/people_radio_text" />
+
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@drawable/time_radio_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:textSize="@dimen/x32"
+                android:text="员工"
+                android:textColor="@drawable/people_radio_text" />
+
+            <RadioButton
+                android:id="@+id/rb3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@drawable/time_radio_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:textSize="@dimen/x32"
+                android:text="会员"
+                android:textColor="@drawable/people_radio_text" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/ll_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_below="@+id/radioGroup"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_record"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24"
+                android:layout_marginBottom="@dimen/y24"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="搜索记录"
+                    android:layout_weight="1"
+                    android:textColor="#3f3f3f"
+                    android:textSize="@dimen/x28" />
+
+                <ImageView
+                    android:id="@+id/iv_del"
+                    android:src="@drawable/icon_del_record"
+                    android:layout_marginRight="@dimen/x4"
+                    android:layout_width="@dimen/x32"
+                    android:layout_height="@dimen/x32" />
+
+                <TextView
+                    android:id="@+id/tv_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="清除记录"
+                    android:textColor="#3f3f3f"
+                    android:textSize="@dimen/x20"
+                    android:paddingTop="@dimen/x28"
+                    android:paddingBottom="@dimen/x28" />
+
+            </LinearLayout>
+
+            <cn.yuyun.yymy.view.FlowLayout
+                android:id="@+id/fl_store"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+            <cn.yuyun.yymy.view.FlowLayout
+                android:visibility="gone"
+                android:id="@+id/fl_staff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+            <cn.yuyun.yymy.view.FlowLayout
+                android:visibility="gone"
+                android:id="@+id/fl_member"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_empty"
+        android:visibility="gone"
+        android:layout_below="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/y2"
+        android:paddingTop="@dimen/y26"
+        android:gravity="center"
+        android:paddingBottom="@dimen/y26">
+
+        <ImageView
+            android:layout_width="@dimen/x44"
+            android:layout_height="@dimen/x44"
+            android:src="@drawable/icon_cat_tips"
+            android:layout_marginRight="@dimen/x16"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#7a7a7a"
+            android:textSize="@dimen/x28"
+            android:text="喵了个咪，没有找到相关内容哦~"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingLeft="@dimen/x24"
+    android:paddingRight="@dimen/x24"
+    android:paddingTop="@dimen/x24">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:background="@drawable/shape_white_corner_main_bg"
+        android:padding="@dimen/x24"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/y8"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/x26"
+            android:text="单据类型:"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_marginTop="@dimen/y16"
+            android:layout_below="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/y8"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/x26"
+            android:layout_alignParentLeft="true"
+            android:text="日期:"/>
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/x26"
+            android:text="数量:"/>
+
+        <TextView
+            android:id="@+id/tv_code"
+            android:layout_marginTop="@dimen/y16"
+            android:layout_below="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/x26"
+            android:textColor="@color/text_gray"
+            android:text="单据编号:"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

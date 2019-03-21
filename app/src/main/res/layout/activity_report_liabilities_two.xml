@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/totalDiagram"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_fixed"
+        android:layout_width="@dimen/x180"
+        android:layout_height="@dimen/y70"
+        android:layout_below="@+id/ll_filter"
+        android:background="#f8f8f8"
+        android:gravity="center"
+        android:text="门店名称"
+        android:textColor="#274335"
+        android:textSize="@dimen/x24" />
+
+    <cn.yuyun.yymy.view.MyHorizontalScrollView
+        android:id="@+id/sv_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y70"
+        android:layout_below="@+id/ll_filter"
+        android:layout_marginStart="@dimen/y1"
+        android:layout_toRightOf="@+id/tv_fixed"
+        android:background="#f8f8f8"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/x180"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="品牌名称"
+                android:textColor="#274335"
+                android:textSize="@dimen/x24" />
+
+            <TextView
+                android:layout_width="@dimen/x180"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="商品类型"
+                android:textColor="#274335"
+                android:textSize="@dimen/x24" />
+
+            <LinearLayout
+                android:layout_width="@dimen/x180"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="品牌未耗(元)"
+                    android:textColor="#274335"
+                    android:textSize="@dimen/x24" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iv_one"
+                    android:layout_width="@dimen/x24"
+                    android:layout_height="@dimen/y24"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:src="@drawable/order_normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/x180"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="品牌未耗次数(次)"
+                    android:textColor="#274335"
+                    android:textSize="@dimen/x24" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iv_two"
+                    android:layout_width="@dimen/x24"
+                    android:layout_height="@dimen/y24"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:src="@drawable/order_normal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </cn.yuyun.yymy.view.MyHorizontalScrollView>
+
+    <com.ajguan.library.EasyRefreshLayout
+        android:id="@+id/easyRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/sv_top">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_left"
+                    android:layout_width="@dimen/x180"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/shape_rv_book_bg"
+                    android:paddingRight="@dimen/y2"
+                    android:scrollbars="none"
+                    tools:listitem="@layout/item_analysis_single" />
+
+                <cn.yuyun.yymy.view.MyHorizontalScrollView
+                    android:id="@+id/sv_right"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/y1"
+                    android:layout_toRightOf="@+id/rv_left"
+                    android:background="@color/white"
+                    android:fillViewport="true"
+                    android:scrollbars="none">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_analysis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/rv_left"
+                        tools:listitem="@layout/item_analysis_row" />
+
+                </cn.yuyun.yymy.view.MyHorizontalScrollView>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </com.ajguan.library.EasyRefreshLayout>
+
+    <TextView
+        android:id="@+id/tv_total"
+        android:layout_width="@dimen/x180"
+        android:layout_height="@dimen/y88"
+        android:gravity="center"
+        android:text="总计"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/x24" />
+
+    <cn.yuyun.yymy.view.MyHorizontalScrollView
+        android:id="@+id/sv_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y88"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/tv_total"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/x180"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="- -"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/x20" />
+
+            <TextView
+                android:layout_width="@dimen/x180"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="- -"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/x20" />
+
+            <TextView
+                android:id="@+id/tv_oneTotal"
+                android:layout_width="@dimen/x180"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="0.00"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/x20" />
+
+            <TextView
+                android:id="@+id/tv_twoTotal"
+                android:layout_width="@dimen/x180"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="0.00"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/x20" />
+
+        </LinearLayout>
+
+    </cn.yuyun.yymy.view.MyHorizontalScrollView>
+
+    <cn.yuyun.yymy.view.EmptyLayout
+        android:id="@+id/emptyLayout"
+        android:visibility="gone"
+        android:layout_below="@+id/tv_fixed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

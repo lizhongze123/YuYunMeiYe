@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_myMember"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/main_bg_gray">
+
+    <com.ajguan.library.EasyRefreshLayout
+        android:id="@+id/easylayout"
+        android:layout_below="@+id/relay_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/listview"
+            android:background="@color/main_bg_gray"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_contact"
+            android:scrollbars="none"
+            android:visibility="visible"
+            android:divider="@null" />
+
+    </com.ajguan.library.EasyRefreshLayout>
+
+    <TextView
+        android:id="@+id/dialog"
+        android:layout_width="80dip"
+        android:layout_height="80dip"
+        android:layout_gravity="center"
+        android:background="@drawable/side_text_bg"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="#ffffffff"
+        android:textSize="30dp"
+        android:visibility="invisible" />
+
+    <cn.yuyun.yymy.view.sidebar.SideBar
+        android:id="@+id/sidebar"
+        android:layout_width="20dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relay_background"
+        android:layout_alignParentRight="true" />
+
+
+    <include layout="@layout/item_list_empty_pic"></include>
+
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/x12"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:button="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/selector_store_area_dialog"
+        android:paddingBottom="@dimen/y16"
+        android:paddingTop="@dimen/y16"
+        android:paddingLeft="@dimen/x45"
+        android:paddingRight="@dimen/x45"
+        android:text="已完成"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:maxEms="4"
+        android:textColor="@drawable/selector_store_area_dialog_text"
+        android:textSize="@dimen/x26" />
+
+</RelativeLayout>

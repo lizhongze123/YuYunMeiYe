@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y560">
+
+        <com.youth.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y520"
+            android:background="@color/loadding_img_bg"
+            app:image_scale_type="center_crop"
+            app:is_auto_play="true" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x32">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x14"
+                tools:text="5555555555"
+                android:textStyle="bold"
+                android:textColor="#3f3f3f"
+                android:textSize="@dimen/x36" />
+
+            <cn.yuyun.yymy.view.RoundAngleImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="@dimen/x140"
+                android:layout_height="@dimen/x140"
+                android:layout_toRightOf="@+id/tv_name"
+                android:clickable="false"
+                android:src="@drawable/avatar_default_female" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_unread"
+        android:layout_width="@dimen/x340"
+        android:layout_height="@dimen/y72"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y48"
+        android:background="@drawable/shape_moments_unread_bg"
+        android:visibility="gone">
+
+        <cn.yuyun.yymy.view.RoundAngleImageView
+            android:id="@+id/msg_avatar"
+            android:layout_width="@dimen/x56"
+            android:layout_height="@dimen/x56"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x8"
+            android:layout_marginRight="@dimen/x8"
+            android:src="@drawable/avatar_default_female" />
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/iv_more"
+            android:layout_marginLeft="@dimen/x8"
+            android:layout_marginRight="@dimen/x8"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/msg_avatar"
+            android:gravity="center_horizontal"
+            android:text="0条新消息"
+            android:textStyle="bold"
+            android:textSize="@dimen/x26"
+            android:textColor="#ffffff" />
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="@dimen/x24"
+            android:layout_height="@dimen/y24"
+            android:layout_marginRight="@dimen/x24"
+            android:layout_centerVertical="true"
+            android:src="@drawable/more_right_one"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rl_empty">
+
+        <ImageView
+            android:id="@+id/img_error_layout"
+            android:layout_width="@dimen/data_null_pic_width"
+            android:layout_height="@dimen/data_null_pic_height"
+            android:src="@drawable/data_null"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

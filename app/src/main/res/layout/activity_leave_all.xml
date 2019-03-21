@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/main_bg_gray"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relay_background"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y88"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/title_bg">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/x88"
+            android:layout_height="@dimen/x88"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_item_default"
+            android:paddingLeft="@dimen/x24"
+            android:paddingRight="@dimen/x24"
+            android:paddingTop="@dimen/y22"
+            android:paddingBottom="@dimen/y22"
+            android:src="@drawable/back_black" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/y12"
+            android:layout_marginTop="@dimen/y20"
+            android:background="@drawable/analysis_radio_group_bg"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_one"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/analysis_radio_bg_left"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:paddingLeft="@dimen/x33"
+                android:paddingRight="@dimen/x33"
+                android:text="我的审批"
+                android:textColor="@drawable/analysis_radio_text"
+                android:textSize="@dimen/x24" />
+
+            <RadioButton
+                android:id="@+id/rb_two"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/analysis_radio_bg_right"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingLeft="@dimen/x33"
+                android:paddingRight="@dimen/x33"
+                android:text="我的申请"
+                android:textColor="@drawable/analysis_radio_text"
+                android:textSize="@dimen/x24" />
+
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="@dimen/y88"
+            android:layout_height="@dimen/y88"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_item_default"
+            android:layout_centerVertical="true"
+            android:paddingTop="@dimen/y22"
+            android:paddingBottom="@dimen/y22"
+            android:paddingLeft="@dimen/x24"
+            android:paddingRight="@dimen/x24"
+            android:src="@drawable/icon_add_two" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        style="@style/separation_line"
+        android:layout_below="@+id/relay_background" />
+
+    <FrameLayout
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

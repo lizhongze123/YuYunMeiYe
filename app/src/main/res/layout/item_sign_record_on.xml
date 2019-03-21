@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_item_default"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_item_default">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_pic"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="打卡时间:"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/x24" />
+
+                <TextView
+                    android:id="@+id/tv_signOnTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x8"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/x24"
+                    tools:text="08:25" />
+
+                <TextView
+                    android:id="@+id/tv_onLate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/arrivals_sel"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="2dp"
+                    android:textColor="@drawable/arrivals_text"
+                    android:textSize="10sp"
+                    android:visibility="gone"
+                    tools:text="不准时" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/arrivals_sel"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="2dp"
+                    android:text="不在范围"
+                    android:textColor="@drawable/arrivals_text"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_onAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y16"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/x24"
+                    android:layout_height="@dimen/x24"
+                    android:src="@drawable/icon_location_green" />
+
+                <TextView
+                    android:id="@+id/tv_signOnAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x8"
+                    android:maxLines="1"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/x24"
+                    tools:text="广州市番禺区华萃明苑" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_pic"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/item_pic"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/x8"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            tools:src="@color/gray_99"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_below="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y2"
+        android:background="#f5f5f5" />
+
+</RelativeLayout>

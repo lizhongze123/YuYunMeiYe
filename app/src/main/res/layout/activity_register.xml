@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d7fefd"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_pic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/register_bg"
+        android:scaleType="fitXY" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/x28"
+        android:layout_above="@+id/tv_qq"
+        android:layout_marginBottom="@dimen/y48"
+        android:layout_centerHorizontal="true"
+        android:text="亲，APP暂未开通手机注册请联系客服~"
+        android:textColor="@color/white"/>
+
+
+    <TextView
+        android:id="@+id/tv_qq"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_above="@+id/ll_bpttom"
+        android:layout_marginBottom="@dimen/y180"
+        android:layout_centerHorizontal="true"
+        android:textColor="#86CDFA"
+        android:paddingLeft="@dimen/x43"
+        android:paddingRight="@dimen/x43"
+        android:paddingBottom="@dimen/y12"
+        android:paddingTop="@dimen/y12"
+        android:text="联系QQ客服" />
+
+    <LinearLayout
+        android:id="@+id/ll_bpttom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/y40"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tv_mobileDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/x28"
+            android:text="客服热线:"
+            android:textColor="#274335"/>
+
+        <TextView
+            android:id="@+id/tv_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/CUSTOMER_SERVICE_MOBILE"
+            android:textColor="#274335"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

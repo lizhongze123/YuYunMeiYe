@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_myMember"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/relay_background"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/title_bg">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_trans_divider"
+            android:padding="15dp"
+            android:src="@drawable/back_white" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="会员管理"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_gift"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/iv_add"
+            android:background="@drawable/selector_trans_divider">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_birthday"
+                android:padding="15dp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_trans_divider"
+            android:src="@drawable/icon_add_two"
+            android:padding="15dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/ll_searchMyMember"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y90"
+            android:layout_marginTop="@dimen/y25"
+            android:layout_marginBottom="@dimen/y16"
+            android:layout_marginLeft="@dimen/x24"
+            android:layout_marginRight="@dimen/x24"
+            android:background="@drawable/shape_search_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/x32"
+                android:layout_height="@dimen/x32"
+                android:layout_marginLeft="@dimen/x34"
+                android:src="@drawable/icon_search_one"/>
+
+            <EditText
+                android:id="@+id/et_input"
+                android:padding="@dimen/x8"
+                android:background="@null"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/x32"
+                android:hint="请输入会员名称"
+                android:cursorVisible="true"
+                android:singleLine="true"
+                android:imeOptions="actionSearch"
+                android:textColorHint="#cccccc"
+                android:textColor="#3f3f3f"
+                android:textSize="@dimen/x28" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_amount"
+        android:layout_below="@+id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/x24"
+        android:paddingRight="@dimen/x24"
+        android:layout_marginBottom="@dimen/y16"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="#3f3f3f"
+            android:textStyle="bold"
+            android:textSize="@dimen/x32"
+            android:text="我的会员0人" />
+
+        <LinearLayout
+            android:id="@+id/ll_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/x10"
+            android:paddingLeft="@dimen/x24"
+            android:paddingBottom="@dimen/x10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x8"
+                android:text="筛选"
+                android:textColor="#7a7a7a"
+                android:textSize="@dimen/x28"/>
+
+            <ImageView
+                android:src="@drawable/ic_filter_three"
+                android:layout_width="@dimen/x32"
+                android:layout_height="@dimen/x32" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.ajguan.library.EasyRefreshLayout
+        android:id="@+id/easylayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_amount">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_member"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            tools:listitem="@layout/item_contact" />
+
+    </com.ajguan.library.EasyRefreshLayout>
+
+    <cn.yuyun.yymy.view.EmptyLayout
+        android:id="@+id/emptyLayout"
+        android:orientation="vertical"
+        android:layout_below="@+id/rl_amount"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

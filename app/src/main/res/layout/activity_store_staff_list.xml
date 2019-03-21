@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/main_content_frame_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_bg">
+
+        <RelativeLayout
+            android:id="@+id/relay_background"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y88"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/title_bg">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/y88"
+                android:layout_height="@dimen/y88"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_trans_divider"
+                android:padding="@dimen/x24"
+                android:src="@drawable/back_black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="本店员工"
+                android:textSize="@dimen/x32"
+                android:textColor="#274335" />
+
+            <ImageView
+                android:id="@+id/iv_gift"
+                android:layout_width="@dimen/y88"
+                android:layout_height="@dimen/y88"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/iv_more"
+                android:padding="@dimen/x24"
+                android:src="@drawable/icon_birthday" />
+
+            <ImageView
+                android:id="@+id/iv_more"
+                android:layout_width="@dimen/y88"
+                android:layout_height="@dimen/y88"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/x24"
+                android:src="@drawable/icon_more" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line_top"
+            style="@style/separation_line"
+            android:layout_below="@+id/relay_background" />
+
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y80"
+            android:layout_marginBottom="@dimen/y5"
+            android:layout_marginLeft="@dimen/x64"
+            android:layout_marginRight="@dimen/x64"
+            android:layout_marginTop="@dimen/y26"
+            android:layout_below="@+id/line_top"
+            android:background="@drawable/shape_search_bg"
+            android:elevation="@dimen/x8"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/x32"
+                android:layout_weight="1"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:hint="请输入员工姓名"
+                android:imeOptions="actionSearch"
+                android:padding="@dimen/x8"
+                android:singleLine="true"
+                android:textColor="@color/gray_33"
+                android:textSize="@dimen/x28" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_search">
+
+            <TextView
+                android:id="@+id/tv_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x24"
+                android:gravity="center"
+                android:paddingBottom="@dimen/y25"
+                android:paddingTop="@dimen/y25"
+                android:text="在职员工"
+                android:textColor="#274335"
+                android:textSize="@dimen/x32" />
+
+            <RelativeLayout
+                android:id="@+id/rl_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/x28"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/y25"
+                    android:paddingTop="@dimen/y25"
+                    android:text="更多筛选"
+                    android:textColor="#7a7a7a"
+                    android:textSize="@dimen/x28" />
+
+                <ImageView
+                    android:layout_width="@dimen/x26"
+                    android:layout_height="@dimen/y27"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:layout_toRightOf="@+id/tv_filter"
+                    android:src="@drawable/ic_filter_three" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1"
+            android:layout_below="@+id/rl"
+            android:background="#e1e1e1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/line"
+            android:orientation="horizontal">
+
+            <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+                android:id="@+id/rv_in"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_bg_gray" />
+
+            <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+                android:id="@+id/rv_out"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_bg_gray" />
+
+            <cn.yuyun.yymy.view.EmptyLayout
+                android:id="@+id/emptyLayout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <!-- 右侧滑动栏 -->
+    <RelativeLayout
+        android:id="@+id/main_right_drawer_layout"
+        android:layout_width="@dimen/x480"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@color/white"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:paddingBottom="@dimen/y30"
+        android:clickable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:paddingTop="@dimen/y20"
+            android:layout_above="@+id/ll_submit"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/y24"
+                android:text="员工距离生日时间"
+                android:textSize="@dimen/x24" />
+
+            <cn.yuyun.yymy.view.RadioGroupEx
+                android:id="@+id/rg_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_time">
+
+                <RadioButton
+                    android:id="@+id/rb1"
+                    android:layout_width="@dimen/x204"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/x12"
+                    android:background="@drawable/selector_button_filter"
+                    android:button="@null"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/y15"
+                    android:paddingTop="@dimen/y15"
+                    android:text="7天"
+                    android:textColor="@drawable/selector_text_filter"
+                    android:textSize="@dimen/x24" />
+
+                <RadioButton
+                    android:id="@+id/rb2"
+                    android:layout_width="@dimen/x204"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:background="@drawable/selector_button_filter"
+                    android:button="@null"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/y15"
+                    android:paddingTop="@dimen/y15"
+                    android:text="15天"
+                    android:textColor="@drawable/selector_text_filter"
+                    android:textSize="@dimen/x24" />
+
+                <RadioButton
+                    android:id="@+id/rb3"
+                    android:layout_width="@dimen/x204"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/x12"
+                    android:layout_marginTop="@dimen/y30"
+                    android:background="@drawable/selector_button_filter"
+                    android:button="@null"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/y15"
+                    android:paddingTop="@dimen/y15"
+                    android:text="30天"
+                    android:textColor="@drawable/selector_text_filter"
+                    android:textSize="@dimen/x24" />
+
+            </cn.yuyun.yymy.view.RadioGroupEx>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/y24"
+                android:layout_marginTop="@dimen/y48"
+                android:text="员工状态"
+                android:textSize="@dimen/x24" />
+
+            <CheckBox
+                android:id="@+id/cb_out"
+                android:button="@null"
+                android:layout_width="@dimen/x204"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sel_store_bg"
+                android:gravity="center_horizontal"
+                android:paddingBottom="@dimen/y15"
+                android:paddingTop="@dimen/y15"
+                android:text="离职员工"
+                android:paddingLeft="@dimen/x8"
+                android:paddingRight="@dimen/x8"
+                android:textColor="@drawable/selector_text_filter"
+                android:textSize="@dimen/x24" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_negative"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/shape_filter_cancel_bg"
+                android:paddingBottom="@dimen/y20"
+                android:paddingTop="@dimen/y20"
+                android:gravity="center"
+                android:text="重置"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x28" />
+
+            <TextView
+                android:id="@+id/tv_positive"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_filter_sumbit_bg"
+                android:paddingBottom="@dimen/y20"
+                android:paddingTop="@dimen/y20"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x28" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

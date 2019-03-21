@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/origin_weibo_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:paddingTop="@dimen/y16"
+    android:scrollbars="none"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_above="@+id/re_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/titlebar_layout"
+                    android:paddingRight="@dimen/x30"
+                    android:paddingLeft="@dimen/x30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <cn.yuyun.yymy.view.bannerview.RoundAngleImageView
+                        android:id="@+id/profile_img"
+                        android:layout_width="@dimen/x80"
+                        android:layout_height="@dimen/x80"
+                        android:src="@drawable/avatar_default_female" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x16"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/profile_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    tools:text="红楼"
+                                    android:textStyle="bold"
+                                    android:textColor="#274335"
+                                    android:textSize="@dimen/x28" />
+
+                                <TextView
+                                    android:id="@+id/profile_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    tools:text="红楼"
+                                    android:layout_alignParentRight="true"
+                                    android:textColor="@color/text_gray"
+                                    android:textSize="@dimen/x24" />
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_position"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    tools:text="16分钟前"
+                                    android:textColor="#3f3f3f"
+                                    android:textSize="@dimen/x24" />
+
+                                <TextView
+                                    android:id="@+id/weiboComeFrom"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textColor="@color/gray_99"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/iv_del"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginRight="15dp"
+                            android:padding="2dp"
+                            android:scaleType="fitStart"
+                            android:visibility="gone"
+                            android:src="@drawable/ic_delete" />
+
+                        <ImageView
+                            android:id="@+id/popover_arrow"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:padding="2dp"
+                            android:visibility="gone"
+                            android:scaleType="fitStart"
+                            android:src="@drawable/wb_share" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/x30"
+                    android:paddingLeft="@dimen/x30"
+                    android:layout_marginBottom="@dimen/y16"
+                    android:layout_marginTop="@dimen/y16"
+                    android:lineSpacingExtra="@dimen/y4"
+                    tools:text="#知政#【财政部谈跨境电商新政：不会给消费者带来太大负担】财政部关税司有关负责人坦承，新政客观上会提高消费者总体税负水平。但其指出，在税率设置上暂给予一定优惠，具体而言有升有降。新政有利于电商化解部分成本，对大众消费品价格总体影响有限，不会给消费者带来太大负担。http://t.cn/RqXsr16"
+                    android:textColor="#3f3f3f"
+                    android:textSize="@dimen/x28" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_image"
+                    android:paddingRight="@dimen/x30"
+                    android:paddingLeft="@dimen/x30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/y24" />
+
+                <ImageView
+                    android:id="@+id/splitLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e5e5e5"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/favorities_delete"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="删除"
+                    android:textColor="#929292"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y24"
+                    android:background="#f5f5f5" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_comment"
+                    android:background="@color/main_bg"
+                    tools:listitem="@layout/item_unboxing_comment"
+                    android:visibility="visible"
+                    android:paddingTop="@dimen/y16"
+                    android:layout_marginBottom="@dimen/y16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/re_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y98"
+        android:layout_alignParentBottom="true"
+        android:background="#f8f8f8"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/x24"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/et_comment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/y16"
+            android:layout_marginTop="@dimen/y16"
+            android:layout_weight="1"
+            android:background="@drawable/shape_comment_bg"
+            android:hint="请留下你的评论"
+            android:imeOptions="actionSend"
+            android:paddingLeft="@dimen/x24"
+            android:paddingRight="@dimen/x24"
+            android:singleLine="true"
+            android:textColor="#3f3f3f"
+            android:textColorHint="#cccccc"
+            android:textSize="@dimen/x28" />
+
+        <RelativeLayout
+            android:id="@+id/bottombar_favorites"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_toLeftOf="@+id/bottombar_like"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20">
+
+            <ImageView
+                android:id="@+id/iv_favorites"
+                android:layout_width="@dimen/x44"
+                android:layout_height="@dimen/x44"
+                android:layout_centerInParent="true"
+                android:background="@drawable/wb_favorites_sel" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottombar_like"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20">
+
+            <ImageView
+                android:id="@+id/iv_like"
+                android:layout_width="@dimen/x44"
+                android:layout_height="@dimen/x44"
+                android:layout_centerInParent="true"
+                android:background="@drawable/wb_like_sel" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

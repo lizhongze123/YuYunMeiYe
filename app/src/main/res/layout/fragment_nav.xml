@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_frg_height"
+    android:background="@drawable/nav_bg"
+    android:clipChildren="false"
+    android:orientation="horizontal">
+
+    <cn.yuyun.yymy.view.NavigationButton
+        android:id="@+id/nav_item_news"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1" />
+
+    <cn.yuyun.yymy.view.NavigationButton
+        android:id="@+id/nav_item_tweet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"/>
+
+
+    <cn.yuyun.yymy.view.NavigationButton
+        android:id="@+id/nav_item_chat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"/>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_add"
+        android:layout_width="@dimen/x96"
+        android:layout_height="@dimen/y103"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/y22">
+
+        <ImageView
+            android:id="@+id/nav_item_tweet_pub"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y100"
+            android:contentDescription="@null"
+            android:src="@drawable/home_add"
+            android:visibility="visible" />
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/nav_item_tweet_pub"
+            android:gravity="center_horizontal|bottom"
+            android:text="添加"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+
+    <cn.yuyun.yymy.view.NavigationButton
+        android:id="@+id/nav_item_explore"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1" />
+
+    <cn.yuyun.yymy.view.NavigationButton
+        android:id="@+id/nav_item_me"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1" />
+
+</LinearLayout>

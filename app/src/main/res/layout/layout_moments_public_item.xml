@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="@dimen/x32"
+    android:paddingLeft="@dimen/x24">
+
+    <TextView
+        android:id="@+id/tv_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/y16"
+        android:background="@color/text_gray"
+        android:text="2018年10月18日15:38:04"
+        android:textColor="#274335"
+        android:textSize="@dimen/x28"
+        android:visibility="gone" />
+
+    <cn.yuyun.yymy.view.RoundAngleImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/x80"
+        android:layout_height="@dimen/x80"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_top"
+        android:src="@drawable/avatar_default_female" />
+
+    <RelativeLayout
+        android:id="@+id/ll_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_top"
+        android:layout_marginBottom="@dimen/y24"
+        android:layout_marginLeft="@dimen/x16"
+        android:layout_marginRight="@dimen/x24"
+        android:layout_toRightOf="@+id/iv_avatar">
+
+        <LinearLayout
+            android:id="@+id/ll_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#274335"
+                android:textSize="@dimen/x28"
+                android:textStyle="bold"
+                tools:text="李李李" />
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_work_type_bg"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/text_blue"
+                android:textSize="12sp"
+                android:visibility="gone"
+                tools:text="日报" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="#7A7A7A"
+                android:textSize="@dimen/x20"
+                tools:text="2018年1月27日15:52" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_name"
+            android:layout_marginBottom="@dimen/y16"
+            android:layout_marginTop="@dimen/y8"
+            android:ellipsize="end"
+            android:lineSpacingExtra="@dimen/y4"
+            android:maxLines="6"
+            android:textColor="#274335"
+            android:textSize="@dimen/x28"
+            tools:text="我是内容内容内容内容我容内容内容我是容内容内容我是容内容内容我是容内容内容我是容内容内容我是容内容内容我是容内容内容我是是内容内容内容我是内容内容内容内容我是内容内容内容内容我是内容内容内容内容我是内容内容内容内容" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_below="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rv">
+
+            <RelativeLayout
+                android:id="@+id/bottombar_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/bottombar_like"
+                android:padding="@dimen/x20">
+
+                <ImageView
+                    android:id="@+id/iv_comment"
+                    android:layout_width="@dimen/x32"
+                    android:layout_height="@dimen/y32"
+                    android:src="@drawable/wb_comment" />
+
+                <TextView
+                    android:id="@+id/tv_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_toRightOf="@+id/iv_comment"
+                    android:text="0"
+                    android:textColor="@drawable/wb_text_selector"
+                    android:textSize="@dimen/x22"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bottombar_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="@dimen/y20"
+                android:paddingLeft="@dimen/x20"
+                android:paddingTop="@dimen/y20">
+
+                <ImageView
+                    android:id="@+id/iv_like"
+                    android:layout_width="@dimen/x32"
+                    android:layout_height="@dimen/y32"
+                    android:background="@drawable/wb_like_sel" />
+
+                <TextView
+                    android:id="@+id/tv_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_toRightOf="@+id/iv_like"
+                    android:text="0"
+                    android:textColor="@drawable/wb_text_selector"
+                    android:textSize="@dimen/x22"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_bottom"
+            android:divider="@drawable/ll_divider"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <RelativeLayout
+                android:id="@+id/rl_likePerson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f5f5f5"
+                android:padding="@dimen/x10">
+
+                <ImageView
+                    android:id="@+id/iv_likePerson"
+                    android:layout_width="@dimen/x24"
+                    android:layout_height="@dimen/x24"
+                    android:layout_marginRight="@dimen/x16"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_marginTop="@dimen/y3"
+                    android:background="@drawable/wb_like_one" />
+
+                <TextView
+                    android:id="@+id/tv_likePerson"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_likePerson"
+                    android:textColor="#576587"
+                    android:textSize="@dimen/x24"
+                    android:textStyle="bold"
+                    tools:text="单据号大豪的好的好的活动后活动后活动后打电话活动后好的好的活动后订货会的后代 " />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_commentContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f5f5f5"
+                android:lineSpacingExtra="@dimen/y16"
+                android:paddingLeft="@dimen/x16"
+                android:paddingRight="@dimen/x16"
+                android:paddingTop="@dimen/y8"
+                tools:text="御韵-彭丽萍：说的很好\n御韵-彭丽萍：说的很好"
+                android:textColor="#000017"
+                android:textSize="@dimen/x24" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:layout_below="@+id/ll_info"
+        android:background="#f2f2f2"
+        android:drawingCacheQuality="low" />
+
+</RelativeLayout>
+

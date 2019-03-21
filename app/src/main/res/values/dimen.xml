@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="title_avatar">50dp</dimen>
+    <dimen name="item_pic">80dp</dimen>
+
+    <dimen name="swipe_item">80dp</dimen>
+
+    <!--签到头像的大小-->
+    <dimen name="sign_people_avatar">45dp</dimen>
+
+    <!--选择图片的item的大小-->
+    <dimen name="select_people_avatar">70dp</dimen>
+
+    <!--选择图片的item的大小-->
+    <dimen name="pic_wall">90dp</dimen>
+
+    <!--个人中心的头像的大小-->
+    <dimen name="user_avatar">60dp</dimen>
+
+    <!--活动item头像的大小-->
+    <dimen name="action_user_avatar">15dp</dimen>
+
+    <!--添加内容图片的item的缩略图大小-->
+    <dimen name="select_people_avatar_width">60dp</dimen>
+    <dimen name="select_people_avatar_height">50dp</dimen>
+
+    <!--列表头像的大小-->
+    <dimen name="item_avatar_size">50dp</dimen>
+
+    <!--审批人头像的大小-->
+    <dimen name="item_approve_avatar_size">@dimen/x80</dimen>
+
+    <dimen name="historyscore_tb">10dp</dimen>
+
+    <!--消息提醒的头像的大小-->
+    <dimen name="work_notice_avatar_size">48dp</dimen>
+
+    <!--会员详细资料item大小-->
+    <dimen name="member_item_size">35dp</dimen>
+
+    <dimen name="sider_bar_textsize">18sp</dimen>
+
+    <dimen name="me_layout_icon">15sp</dimen>
+
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="collapsed_header_height">0dp</dimen>
+    <dimen name="init_float_offset_y">130dp</dimen>
+    <dimen name="collapsed_float_offset_y">5dp</dimen>
+    <dimen name="init_float_margin">20dp</dimen>
+    <dimen name="collapsed_float_margin">5dp</dimen>
+
+    <dimen name="data_null_pic_width">@dimen/x360</dimen>
+    <dimen name="data_null_pic_height">@dimen/x360</dimen>
+
+    <dimen name="nav_frg_height">@dimen/y98</dimen>
+
+    <dimen name="item_appointment_height">@dimen/y128</dimen>
+    <dimen name="item_appointment_width">@dimen/y122</dimen>
+</resources>

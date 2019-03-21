@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/nav_iv_icon"
+            android:layout_width="@dimen/x72"
+            android:layout_height="@dimen/x72"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="@dimen/x12"
+            android:src="@drawable/home_work" />
+
+        <TextView
+            android:id="@+id/nav_tv_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/x24"
+            android:minHeight="@dimen/x24"
+            android:layout_marginLeft="@dimen/x36"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/ic_red_dot"
+            android:gravity="center"
+            android:lines="1"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x18"
+            android:paddingLeft="@dimen/x6"
+            android:paddingRight="@dimen/x6"
+            android:visibility="gone"
+            android:maxEms="3"
+            tools:text="9"
+            tools:visibility="visible" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/nav_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="@dimen/y4"
+        android:gravity="center"
+        android:textColor="#3f3f3f"
+        android:textSize="@dimen/x22"
+        tools:text="资讯" />
+
+</LinearLayout>

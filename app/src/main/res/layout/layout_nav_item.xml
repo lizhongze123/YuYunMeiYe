@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+       <!-- <ImageView
+            android:id="@+id/nav_iv_icon"
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/y45"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="@dimen/lay_2"
+            android:paddingRight="@dimen/lay_2"
+            android:paddingTop="@dimen/lay_2"
+            android:scaleType="fitCenter"
+            android:src="@drawable/index_store_selector" />-->
+
+        <ImageView
+            android:id="@+id/nav_iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y50"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/index_store_selector" />
+
+        <TextView
+            android:id="@+id/nav_tv_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y28"
+            android:layout_gravity="top|center"
+            android:layout_marginLeft="@dimen/lay_8"
+            android:background="@drawable/ic_red_dot"
+            android:gravity="center"
+            android:lines="1"
+            android:minWidth="@dimen/x28"
+            android:paddingLeft="@dimen/x6"
+            android:paddingRight="@dimen/x6"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_10"
+            android:visibility="gone"
+            tools:text="1"
+            tools:visibility="visible" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/nav_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:gravity="center"
+        android:textColor="@drawable/index_textcolor_selector"
+        android:textSize="@dimen/x20"
+        tools:text="资讯" />
+
+</LinearLayout>

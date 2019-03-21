@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:id="@+id/ll_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第三者"
+            android:textStyle="bold"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_threeOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:paddingBottom="@dimen/y16"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="萌萌萌" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y48"
+            android:text="情感经历"
+            android:textStyle="bold"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_threeTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/y16"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="萌萌萌" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y48"
+            android:text="最关心的人"
+            android:textStyle="bold"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_threeThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/y16"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="萌萌萌" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y48"
+            android:text="性生活质量频次"
+            android:textStyle="bold"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_threeFour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/y16"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="孩子所在学校" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y48"
+            android:text="与领导关系"
+            android:textStyle="bold"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_threeFive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/y16"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="体验、就诊场所" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y48"
+            android:text="朋友情况"
+            android:textStyle="bold"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_threeSix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/y16"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="萌萌萌" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y48"
+            android:text="喜欢的服务人员性格"
+            android:textStyle="bold"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_threeSeven"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/y16"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="萌萌萌" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y48"
+            android:text="夫妻关系"
+            android:textStyle="bold"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_threeEight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/y16"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="萌萌萌" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y48"
+            android:text="纪念日"
+            android:textStyle="bold"
+            android:textColor="#274335"
+            android:textSize="@dimen/x32" />
+
+        <EditText
+            android:id="@+id/et_threeNine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:layout_weight="1"
+            android:background="@drawable/sel_xfile_et_bg"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/y16"
+            android:textColor="#274335"
+            android:textSize="@dimen/x24"
+            tools:text="萌萌萌" />
+
+    </LinearLayout>
+
+</ScrollView>

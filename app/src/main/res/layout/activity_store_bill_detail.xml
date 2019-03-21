@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/common_selector_list_view_item"
+        android:paddingBottom="@dimen/y20"
+        android:paddingLeft="@dimen/x32"
+        android:paddingRight="@dimen/x32"
+        android:paddingTop="@dimen/y20">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/x80"
+            android:layout_height="@dimen/y80"
+            android:layout_alignParentLeft="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/avatar_default_female" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x16"
+            android:layout_toRightOf="@id/iv_avatar">
+
+            <LinearLayout
+                android:id="@+id/ll_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="用户名"
+                    android:textColor="#FF1C1C1C"
+                    android:textSize="@dimen/x28" />
+
+                <TextView
+                    android:id="@+id/tv_vip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x8"
+                    android:layout_toRightOf="@id/tv_name"
+                    android:textColor="#FF9B59"
+                    android:textSize="@dimen/x22"
+                    android:visibility="gone"
+                    tools:text="钻石" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_store"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_user"
+                android:layout_marginTop="@dimen/y8"
+                android:textColor="@color/gray_99"
+                android:textSize="@dimen/x22"
+                tools:text="12352525525" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_createTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_content"
+            android:layout_marginTop="@dimen/y10"
+            android:textColor="#FF7A7A7A"
+            android:textSize="@dimen/x18"
+            tools:text="2018年5月23日 14:44:44" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_info">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_refund"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/y32"
+                    android:layout_marginLeft="@dimen/x32"
+                    android:layout_marginRight="@dimen/x32"
+                    android:layout_marginTop="@dimen/x32"
+                    android:background="@drawable/shape_bill_type_bottom_bg"
+                    android:elevation="@dimen/x10"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_status"
+                            android:layout_width="@dimen/x180"
+                            android:layout_height="@dimen/y85"
+                            android:layout_marginLeft="@dimen/x32"
+                            android:background="@color/colorPrimary"
+                            android:gravity="center"
+                            android:text="退款"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/x32" />
+
+                        <LinearLayout
+                            android:id="@+id/expand_refund"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/x16"
+                                android:layout_toLeftOf="@+id/iv_expand"
+                                android:text="更多"
+                                android:textColor="#c0c0c0"
+                                android:textSize="@dimen/x28" />
+
+                            <ImageView
+                                android:id="@+id/iv_refund"
+                                android:layout_width="@dimen/x28"
+                                android:layout_height="@dimen/y16"
+                                android:layout_marginRight="@dimen/x16"
+                                android:src="@drawable/ic_expand" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_refund"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_give"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/x32"
+                    android:background="@drawable/shape_bill_type_bottom_bg"
+                    android:elevation="@dimen/x10"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="@dimen/x180"
+                            android:layout_height="@dimen/y85"
+                            android:layout_marginLeft="@dimen/x32"
+                            android:background="@color/colorPrimary"
+                            android:gravity="center"
+                            android:text="赠送"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/x32" />
+
+                        <LinearLayout
+                            android:id="@+id/expand_give"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/x16"
+                                android:layout_toLeftOf="@+id/iv_expand"
+                                android:text="更多"
+                                android:textColor="#c0c0c0"
+                                android:textSize="@dimen/x28" />
+
+                            <ImageView
+                                android:id="@+id/iv_give"
+                                android:layout_width="@dimen/x28"
+                                android:layout_height="@dimen/y16"
+                                android:layout_marginRight="@dimen/x16"
+                                android:src="@drawable/ic_expand" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_give"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_consume"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/x32"
+                    android:background="@drawable/shape_bill_type_bottom_bg"
+                    android:elevation="@dimen/x10"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="@dimen/x180"
+                            android:layout_height="@dimen/y85"
+                            android:layout_marginLeft="@dimen/x32"
+                            android:background="@color/colorPrimary"
+                            android:gravity="center"
+                            android:text="耗卡"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/x32" />
+
+                        <LinearLayout
+                            android:id="@+id/expand_consume"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/x16"
+                                android:layout_toLeftOf="@+id/iv_expand"
+                                android:text="更多"
+                                android:textColor="#c0c0c0"
+                                android:textSize="@dimen/x28" />
+
+                            <ImageView
+                                android:id="@+id/iv_consume"
+                                android:layout_width="@dimen/x28"
+                                android:layout_height="@dimen/y16"
+                                android:layout_marginRight="@dimen/x16"
+                                android:src="@drawable/ic_expand" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_consume"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_buy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/x32"
+                    android:background="@drawable/shape_bill_type_bottom_bg"
+                    android:elevation="@dimen/x10"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="@dimen/x180"
+                            android:layout_height="@dimen/y85"
+                            android:layout_marginLeft="@dimen/x32"
+                            android:background="@color/colorPrimary"
+                            android:gravity="center"
+                            android:text="购买"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/x32" />
+
+                        <LinearLayout
+                            android:id="@+id/expand_buy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/x16"
+                                android:layout_toLeftOf="@+id/iv_expand"
+                                android:text="更多"
+                                android:textColor="#c0c0c0"
+                                android:textSize="@dimen/x28" />
+
+                            <ImageView
+                                android:id="@+id/iv_buy"
+                                android:layout_width="@dimen/x28"
+                                android:layout_height="@dimen/y16"
+                                android:layout_marginRight="@dimen/x16"
+                                android:src="@drawable/ic_expand" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_buy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_storedvalue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/x32"
+                    android:background="@drawable/shape_bill_type_bottom_bg"
+                    android:elevation="@dimen/x10"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="@dimen/x180"
+                            android:layout_height="@dimen/y85"
+                            android:layout_marginLeft="@dimen/x32"
+                            android:background="@color/colorPrimary"
+                            android:gravity="center"
+                            android:text="储值"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/x32" />
+
+                        <LinearLayout
+                            android:id="@+id/expand_storedvalue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/x16"
+                                android:layout_toLeftOf="@+id/iv_expand"
+                                android:text="更多"
+                                android:textColor="#c0c0c0"
+                                android:textSize="@dimen/x28" />
+
+                            <ImageView
+                                android:id="@+id/iv_storedvalue"
+                                android:layout_width="@dimen/x28"
+                                android:layout_height="@dimen/y16"
+                                android:layout_marginRight="@dimen/x16"
+                                android:src="@drawable/ic_expand" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_storedvalue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_repayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/x32"
+                    android:background="@drawable/shape_bill_type_bottom_bg"
+                    android:elevation="@dimen/x10"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="@dimen/x180"
+                            android:layout_height="@dimen/y85"
+                            android:layout_marginLeft="@dimen/x32"
+                            android:background="@color/colorPrimary"
+                            android:gravity="center"
+                            android:text="还款"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/x32" />
+
+                        <LinearLayout
+                            android:id="@+id/expand_repayment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/x16"
+                                android:layout_toLeftOf="@+id/iv_expand"
+                                android:text="更多"
+                                android:textColor="#c0c0c0"
+                                android:textSize="@dimen/x28" />
+
+                            <ImageView
+                                android:id="@+id/iv_repayment"
+                                android:layout_width="@dimen/x28"
+                                android:layout_height="@dimen/y16"
+                                android:layout_marginRight="@dimen/x16"
+                                android:src="@drawable/ic_expand" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_repayment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

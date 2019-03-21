@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.yuyun.yymy.view.BorderTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/borderTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="@dimen/x32"
+    android:textStyle="bold"
+    android:background="#ffffff"
+    android:paddingLeft="@dimen/x32"
+    android:paddingRight="@dimen/x32"
+    android:paddingTop="@dimen/y20"
+    android:paddingBottom="@dimen/y20"
+    android:layout_marginLeft="@dimen/x12"
+    android:layout_marginRight="@dimen/x12"
+    android:layout_marginTop="@dimen/y12"
+    android:layout_marginBottom="@dimen/y12"
+    tools:text="44444">
+
+</cn.yuyun.yymy.view.BorderTextView>

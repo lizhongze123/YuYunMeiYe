@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selectpic_top_bg"
+        android:gravity="center_horizontal"
+        android:padding="15dp"
+        android:textColor="@color/dialog_selectpic_album_font"
+        android:text="个人预约"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/dialog_selectpic_pic_line" />
+
+    <TextView
+        android:id="@+id/tv_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selectpic_bottom_bg"
+        android:gravity="center_horizontal"
+        android:padding="15dp"
+        android:text="门店预约"
+        android:textColor="@color/dialog_selectpic_album_font"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selectpic_all_bg"
+        android:gravity="center_horizontal"
+        android:padding="15dp"
+        android:text="取消"
+        android:textColor="@color/dialog_selectpic_cancel_font"
+        android:textSize="18sp" />
+
+</LinearLayout>

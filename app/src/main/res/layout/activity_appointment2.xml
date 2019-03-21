@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:listitem="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y80"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/time_radio_bg"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="今天"
+            android:textColor="@drawable/people_radio_text"
+            android:textSize="@dimen/x32" />
+
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/time_radio_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="明天"
+            android:textColor="@drawable/people_radio_text"
+            android:textSize="@dimen/x32" />
+
+        <RadioButton
+            android:id="@+id/rb3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/time_radio_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="02-02"
+            android:textColor="@drawable/people_radio_text"
+            android:textSize="@dimen/x32" />
+
+        <RadioButton
+            android:id="@+id/rb4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/time_radio_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="明天"
+            android:textColor="@drawable/people_radio_text"
+            android:textSize="@dimen/x32" />
+
+        <RadioButton
+            android:id="@+id/rb5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/time_radio_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="明天"
+            android:textColor="@drawable/people_radio_text"
+            android:textSize="@dimen/x32" />
+
+        <RadioButton
+            android:id="@+id/rb6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/time_radio_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="明天"
+            android:textColor="@drawable/people_radio_text"
+            android:textSize="@dimen/x32" />
+
+        <RadioButton
+            android:id="@+id/rb7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/time_radio_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="明天"
+            android:textColor="@drawable/people_radio_text"
+            android:textSize="@dimen/x32"/>
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/line_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:layout_below="@+id/radioGroup"
+        android:background="#F5F5F5" />
+
+    <LinearLayout
+        android:id="@+id/ll_left"
+        android:layout_width="@dimen/x128"
+        android:layout_height="@dimen/y90"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/line_top"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_vertical"
+        android:layout_width="@dimen/x2"
+        android:layout_height="@dimen/y58"
+        android:paddingBottom="@dimen/y16"
+        android:layout_marginTop="@dimen/y16"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/line_top"
+        android:layout_toEndOf="@+id/ll_left"
+        android:background="#F5F5F5"
+        android:drawingCacheQuality="low" />
+
+    <LinearLayout
+        android:id="@+id/ll_topContainer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y90"
+        android:layout_below="@+id/line_top"
+        android:layout_marginStart="@dimen/y1"
+        android:layout_toRightOf="@+id/line_vertical"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="待审批"
+            android:textColor="#7a7a7a"
+            android:textSize="@dimen/x28" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="已审批"
+            android:textColor="#7a7a7a"
+            android:textSize="@dimen/x28" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_block"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_topContainer">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/y64"
+                    android:layout_toRightOf="@+id/rv_left">
+
+                    <LinearLayout
+                        android:id="@+id/container_left"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/container_right"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_left"
+                    android:layout_width="@dimen/x128"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/shape_rv_book_bg"
+                    android:scrollbars="none" />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <cn.yuyun.yymy.view.EmptyLayout
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/ll_topContainer"/>
+
+</RelativeLayout>

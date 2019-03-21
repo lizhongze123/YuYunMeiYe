@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/tl_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y88"
+        android:background="#D7FEFD"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/x92"
+            android:layout_height="@dimen/y88"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_trans_divider"
+            android:paddingLeft="@dimen/x24"
+            android:paddingRight="@dimen/x24"
+            android:paddingTop="@dimen/y22"
+            android:paddingBottom="@dimen/y22"
+            android:src="@drawable/back_black" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="门店详情"
+            android:singleLine="true"
+            android:textColor="#3f3f3f"
+            android:textSize="@dimen/x32"
+            android:ellipsize="marquee"
+            android:maxEms="8"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/iv_set"
+            android:visibility="gone"
+            android:layout_width="@dimen/x70"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/x20"
+            android:paddingRight="@dimen/x24"
+            android:paddingTop="@dimen/x20"
+            android:src="@drawable/icon_title_set" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y160"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/store_img_background" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x24"
+                    android:layout_marginTop="@dimen/y24">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_avatar"
+                        android:layout_width="@dimen/x110"
+                        android:layout_height="@dimen/x110"
+                        android:src="@drawable/default_store" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x46"
+                        android:layout_toRightOf="@+id/iv_avatar"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:textColor="#3F3F3F"
+                            android:textSize="@dimen/x28"
+                            tools:text="用户名称" />
+
+                        <TextView
+                            android:id="@+id/tv_charge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/y8"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textColor="#FF7A7A7A"
+                            android:textSize="@dimen/x20"
+                            tools:text="负责人:御玫瑰" />
+
+                        <TextView
+                            android:id="@+id/tv_mobile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/y4"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textColor="#FF7A7A7A"
+                            android:textSize="@dimen/x20"
+                            tools:text="电话:" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f8f8f8"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingBottom="@dimen/y16"
+                    android:paddingTop="@dimen/y16"
+                    android:paddingLeft="@dimen/x24">
+
+                    <ImageView
+                        android:layout_width="@dimen/x12"
+                        android:layout_height="@dimen/y32"
+                        android:layout_marginRight="@dimen/x8"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_store_desc"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="门店店务"
+                        android:textColor="#274335"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/x28" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_staff"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/y187"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_item_default"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/x72"
+                            android:layout_height="@dimen/x72"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/store_staff" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/y8"
+                            android:text="本店员工"
+                            android:textColor="#3f3f3f"
+                            android:textSize="@dimen/x20" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_attendance"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/y187"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_item_default"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/x72"
+                            android:layout_height="@dimen/x72"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/store_attendance" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/y8"
+                            android:text="考勤汇总"
+                            android:textColor="#3f3f3f"
+                            android:textSize="@dimen/x20"  />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/y187"
+                        android:layout_weight="1" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/y187"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y10"
+                    android:background="@color/white"
+                    android:paddingBottom="@dimen/y16"
+                    android:paddingTop="@dimen/y16"
+                    android:paddingLeft="@dimen/x24">
+
+                    <ImageView
+                        android:layout_width="@dimen/x12"
+                        android:layout_height="@dimen/y32"
+                        android:layout_marginRight="@dimen/x8"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_report_desc"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="报表中心"
+                        android:textColor="#274335"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/x28" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_staffAnalysis"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/y187"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_item_default"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/x72"
+                            android:layout_height="@dimen/x72"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/store_staff_analysis" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/y8"
+                            android:text="员工业绩表"
+                            android:textColor="#3f3f3f"
+                            android:textSize="@dimen/x20" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_hqOutput"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/y187"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_item_default"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/x72"
+                            android:layout_height="@dimen/x72"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/store_store_sale" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/y8"
+                            android:text="总部出库表"
+                            android:textColor="#3f3f3f"
+                            android:textSize="@dimen/x20"  />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/y187"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_item_default"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/x72"
+                            android:layout_height="@dimen/x72"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/y8"
+
+                            android:textColor="#3f3f3f"
+                            android:textSize="@dimen/x20" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/y187"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_item_default"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/x72"
+                            android:layout_height="@dimen/x72"
+                            android:scaleType="fitCenter" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/y8"
+                            android:textColor="#3f3f3f"
+                            android:textSize="@dimen/x20"  />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y10"
+                    android:background="@color/white"
+                    android:paddingBottom="@dimen/y16"
+                    android:paddingTop="@dimen/y16"
+                    android:paddingLeft="@dimen/x24">
+
+                    <ImageView
+                        android:layout_width="@dimen/x12"
+                        android:layout_height="@dimen/y32"
+                        android:layout_marginRight="@dimen/x8"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_work_desc"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="门店库存"
+                        android:textColor="#274335"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/x28" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_stock"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/y187"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_item_default"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/x72"
+                            android:layout_height="@dimen/x72"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/store_stock" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/y8"
+                            android:text="库存管理"
+                            android:textColor="#3f3f3f"
+                            android:textSize="@dimen/x20"  />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/y187"
+                        android:layout_weight="1" />
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/y187"
+                        android:layout_weight="1" />
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/y187"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

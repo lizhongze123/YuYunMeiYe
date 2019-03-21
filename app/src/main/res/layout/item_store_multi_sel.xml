@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- 这个TextView就是显示字母的 -->
+    <TextView
+        android:id="@+id/tv_lv_item_tag"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y45"
+        android:textColor="@color/white"
+        android:background="@color/main_bg_gray"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/x32"
+        tools:text="停用门店"
+        android:textSize="@dimen/x24"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/common_selector_list_view_item"
+        android:paddingBottom="@dimen/y30"
+        android:paddingLeft="@dimen/x30"
+        android:paddingRight="@dimen/x30"
+        android:paddingTop="@dimen/y30">
+
+        <cn.yuyun.yymy.view.RoundAngleImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/x80"
+            android:layout_height="@dimen/y80"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="@dimen/x16"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_store" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_avatar">
+
+            <LinearLayout
+                android:id="@+id/ll_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_storeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="用户名"
+                    android:textColor="#274335"
+                    android:textSize="@dimen/x28" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_user"
+                android:layout_marginTop="@dimen/x8"
+                android:text="负责人:"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/x24" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_user"
+                android:layout_marginTop="@dimen/x8"
+                android:layout_toRightOf="@id/tv_address"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/x24"
+                tools:text="李李李" />
+
+        </RelativeLayout>
+
+        <CheckBox
+            android:id="@+id/cb"
+            android:layout_width="@dimen/x35"
+            android:layout_height="@dimen/x35"
+            android:layout_marginRight="@dimen/x24"
+            android:layout_alignParentRight="true"
+            android:button="@null"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/bg_checkbox_blue"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_below="@+id/rl"
+        android:layout_width="match_parent"
+        android:background="#f5f5f5"
+        android:layout_height="@dimen/y2"/>
+
+</LinearLayout>

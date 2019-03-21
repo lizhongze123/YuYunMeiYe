@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RadioGroup
+        android:layout_below="@+id/ll_search"
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:gravity="center"
+            android:text="7天内"
+            android:textColor="@drawable/people_radio_text" />
+
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:gravity="center"
+            android:text="15天内"
+            android:textColor="@drawable/people_radio_text" />
+
+        <RadioButton
+            android:id="@+id/rb3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:gravity="center"
+            android:text="30天内"
+            android:textColor="@drawable/people_radio_text" />
+
+    </RadioGroup>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:visibility="visible"
+        android:layout_below="@+id/radioGroup"
+        tools:listitem="@layout/item_contact"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+   <!-- <com.ajguan.library.EasyRefreshLayout
+        android:id="@+id/easylayout"
+        android:layout_below="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:visibility="visible"
+                tools:listitem="@layout/item_contact"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+    </com.ajguan.library.EasyRefreshLayout>-->
+
+</RelativeLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/goLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/point_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/goComing"
+            android:layout_width="@dimen/x210"
+            android:layout_height="@dimen/y70"
+            android:layout_marginBottom="@dimen/y100"
+            android:clickable="true"
+            android:src="@drawable/go_bg"
+            android:text="立即体验"
+            android:textColor="@color/gray_99"
+            android:textSize="@dimen/x22" />
+
+        <TextView
+            android:id="@+id/goLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/goComing"
+            android:clickable="true"
+            android:text="登录"
+            android:textColor="#4682B4"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <!--指示器-->
+    <LinearLayout
+        android:id="@+id/point_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22dip"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="8dp"
+            android:layout_gravity="center_horizontal"
+            android:clickable="true"
+            android:contentDescription="指示器"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/sel_point" />
+
+        <ImageView
+            android:layout_width="12dip"
+            android:layout_height="8dip"
+            android:layout_gravity="center_horizontal"
+            android:clickable="true"
+            android:contentDescription="指示器"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/sel_point" />
+
+        <ImageView
+            android:layout_width="12dip"
+            android:layout_height="8dip"
+            android:layout_gravity="center_horizontal"
+            android:clickable="true"
+            android:contentDescription="指示器"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/sel_point" />
+
+        <ImageView
+            android:layout_width="12dip"
+            android:layout_height="8dip"
+            android:layout_gravity="center_horizontal"
+            android:clickable="true"
+            android:contentDescription="指示器"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/sel_point" />
+
+    </LinearLayout>
+
+</RelativeLayout>

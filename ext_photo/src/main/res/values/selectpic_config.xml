@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 图片选择器的数量限制 -->
+    <string name="selectpic_item_limit">9</string>
+    <!-- dimen======================================================= -->
+    <!-- 选择器图片item的宽度 -->
+    <dimen name="selectpic_item_width">65dp</dimen>
+    <!-- 选择器图片item的高度 -->
+    <dimen name="selectpic_item_height">65dp</dimen>
+
+    <!-- 选择图片方式的对话框===================================================== -->
+    <!-- 拍照字体 -->
+    <color name="dialog_selectpic_pic_font">#920683</color>
+    <!-- 相册字体 -->
+    <color name="dialog_selectpic_album_font">#4d4d4d</color>
+    <!-- 取消字体 -->
+    <color name="dialog_selectpic_cancel_font">#4d4d4d</color>
+
+    <!-- 对话被按下的颜色 -->
+    <color name="dialog_selectpic_pic_press">#F2F2F2</color>
+
+    <!-- 对话框背景颜色 -->
+    <color name="dialog_selectpic_pic_bg">#ffffff</color>
+
+    <!-- 对话框间隔线颜色 -->
+    <color name="dialog_selectpic_pic_line">#e6e6e6</color>
+
+    <!-- 删除图片===================================================== -->
+    <!-- 顶部黑色黑色透明 -->
+    <color name="delete_selectpic_transparent_black">#99000000</color>
+
+    <!-- 样式===================================================== -->
+    <!-- 弹出的动画样式 -->
+    <style name="select_anim_dialog">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit_anim</item>
+    </style>
+
+    <!-- 对话框样色 -->
+    <style name="select_MyDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!--  相册选择 -->
+    <dimen name="image_size">120dp</dimen>
+    <dimen name="space_size">2dp</dimen>
+    <dimen name="folder_cover_size">72dp</dimen>
+
+    <!-- 裁剪图片 -->
+    <string name="crop__saving">Saving picture…</string>
+
+    <string name="crop__wait">Please wait…</string>
+
+    <string name="crop_pick_error">No image sources available</string>
+
+    <style name="Crop" />
+
+
+    <attr name="cropImageStyle" format="reference" />
+
+
+    <declare-styleable name="CropImageView">
+
+        <attr name="highlightColor" format="reference|color" />
+
+        <attr name="showThirds" format="boolean" />
+
+        <attr name="showCircle" format="boolean" />
+
+
+        <attr name="showHandles">
+
+            <enum name="changing" value="0" />
+
+            <enum name="always" value="1" />
+
+            <enum name="never" value="2" />
+
+        </attr>
+
+    </declare-styleable>
+</resources>

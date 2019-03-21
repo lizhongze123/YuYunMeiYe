@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="@color/main_bg">
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginRight="1dp"
+            android:maxLines="1"
+            android:layout_height="match_parent"
+            android:text="1个月"
+            android:background="@color/white"
+            android:textColor="@color/gray_66"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_two"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="3个月"
+            android:maxLines="1"
+            android:layout_marginRight="1dp"
+            android:background="@color/white"
+            android:textColor="@color/gray_66"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_three"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="6个月"
+            android:maxLines="1"
+            android:layout_marginRight="1dp"
+            android:background="@color/white"
+            android:textColor="@color/gray_66"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_four"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="12个月"
+            android:maxLines="1"
+            android:background="@color/white"
+            android:textColor="@color/gray_66"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

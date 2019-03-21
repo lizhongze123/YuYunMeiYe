@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y80"
+            android:layout_marginTop="@dimen/y25"
+            android:layout_marginBottom="@dimen/y24"
+            android:layout_marginLeft="@dimen/x24"
+            android:layout_marginRight="@dimen/x24"
+            android:background="@drawable/shape_search_bg"
+            android:elevation="@dimen/y2"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <cn.yuyun.yymy.view.MaxWidthRecyclerView
+                android:id="@+id/rv_top"
+                android:layout_marginRight="@dimen/x10"
+                android:layout_marginLeft="@dimen/x10"
+                app:maxWidth="@dimen/x340"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_width="@dimen/x32"
+                android:layout_height="@dimen/x32"
+                android:layout_marginLeft="@dimen/x16"
+                android:src="@drawable/icon_search_one"/>
+
+            <EditText
+                android:id="@+id/et_search"
+                android:padding="@dimen/x8"
+                android:background="@null"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/x32"
+                android:hint="请输入员工姓名"
+                android:cursorVisible="true"
+                android:singleLine="true"
+                android:imeOptions="actionSearch"
+                android:textColor="#3f3f3f"
+                android:textColorHint="#cccccc"
+                android:textSize="@dimen/x28" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:background="#f8f8f8"
+        android:drawingCacheQuality="low"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y24"/>
+
+    <com.ajguan.library.EasyRefreshLayout
+        android:id="@+id/easylayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.ajguan.library.EasyRefreshLayout>
+
+    <cn.yuyun.yymy.view.EmptyLayout
+        android:id="@+id/emptyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

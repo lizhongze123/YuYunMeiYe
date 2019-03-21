@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/origin_ub_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_item_default"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/cb"
+        android:layout_width="@dimen/x40"
+        android:layout_height="@dimen/y40"
+        android:layout_marginRight="@dimen/x24"
+        android:layout_marginLeft="@dimen/x24"
+        android:layout_marginTop="@dimen/y40"
+        android:button="@null"
+        android:visibility="gone"
+        android:background="@drawable/bg_checkbox_green"
+        android:layout_centerVertical="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_item_default"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/x24"
+        android:paddingRight="@dimen/x24"
+        android:paddingTop="@dimen/y24">
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="@dimen/x64"
+                    android:layout_height="@dimen/x64"
+                    android:src="@drawable/avatar_default_female" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/x16"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#3f3f3f"
+                        android:textSize="@dimen/x24"
+                        tools:text="红楼" />
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/y6"
+                        android:layout_below="@+id/tv_name"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/x18"
+                        tools:text="16分钟前  " />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/y8"
+                android:layout_marginTop="@dimen/y16"
+                android:textColor="#3f3f3f"
+                android:textStyle="bold"
+                android:textSize="@dimen/x28"
+                tools:text="#知政#" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLines="4"
+                android:ellipsize="end"
+                android:layout_marginTop="@dimen/y16"
+                android:layout_marginBottom="@dimen/y8"
+                android:lineSpacingExtra="@dimen/y4"
+                android:textColor="#3f3f3f"
+                android:textSize="@dimen/x24"
+                tools:text="#知政#【财政部谈跨境电商新政：不会给消费者带来太大负担】财政部关税司有关负责人坦承，新政客观上会提高消费者总体税负水平。但其指出，在税率设置上暂给予一定优惠，具体而言有升有降。新政有利于电商化解部分成本，对大众消费品价格总体影响有限，不会给消费者带来太大负担。http://t.cn/RqXsr16" />
+
+            <LinearLayout
+                android:id="@+id/ll_pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/y8">
+
+                <ImageView
+                    android:id="@+id/iv_pic_one"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/y160"
+                    android:layout_marginRight="@dimen/x4"
+                    android:src="@color/loadding_img_bg"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/iv_pic_two"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    android:layout_height="@dimen/y160"
+                    android:layout_marginLeft="@dimen/x2"
+                    android:layout_marginRight="@dimen/x2"
+                    android:src="@color/loadding_img_bg"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/iv_pic_three"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/y160"
+                    android:layout_marginLeft="@dimen/x4"
+                    android:src="@color/loadding_img_bg"
+                    android:visibility="invisible"
+                    android:scaleType="centerCrop" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/x18"
+                android:textColor="#7a7a7a"
+                tools:text="已获100个赞"/>
+
+            <RelativeLayout
+                android:id="@+id/bottombar_comment"
+                android:layout_toLeftOf="@+id/bottombar_favorites"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/y24"
+                android:paddingLeft="@dimen/y16"
+                android:paddingRight="@dimen/x16"
+                android:paddingTop="@dimen/y16">
+
+                <ImageView
+                    android:id="@+id/iv_comment"
+                    android:layout_width="@dimen/x32"
+                    android:layout_height="@dimen/x32"
+                    android:src="@drawable/wb_comment" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bottombar_favorites"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/bottombar_like"
+                android:paddingBottom="@dimen/y24"
+                android:paddingLeft="@dimen/y16"
+                android:paddingRight="@dimen/x16"
+                android:paddingTop="@dimen/y16">
+
+                <ImageView
+                    android:id="@+id/iv_favorites"
+                    android:layout_width="@dimen/x32"
+                    android:layout_height="@dimen/x32"
+                    android:background="@drawable/wb_favorites_sel" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bottombar_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="@dimen/y24"
+                android:paddingLeft="@dimen/y16"
+                android:paddingTop="@dimen/y16">
+
+                <ImageView
+                    android:id="@+id/iv_like"
+                    android:layout_width="@dimen/x32"
+                    android:layout_height="@dimen/x32"
+                    android:background="@drawable/wb_like_sel" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:background="#f2f2f2"
+            android:layout_width="match_parent"
+            android:drawingCacheQuality="low"
+            android:layout_height="@dimen/y1"/>
+
+    </LinearLayout>
+
+</LinearLayout>

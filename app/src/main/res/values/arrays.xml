@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="data_items_home_top">
+        <item>考勤打卡</item>
+        <item>预约管理</item>
+        <item>工作汇报</item>
+    </string-array>
+
+    <string-array name="data_items_home">
+        <item>考勤打卡</item>
+        <item>预约管理</item>
+        <item>工作汇报</item>
+        <item>请假申请</item>
+        <item>单据管理</item>
+        <item>会员管理</item>
+        <item>通知公告</item>
+        <item>培训资料</item>
+        <item>品项分析</item>
+    </string-array>
+
+    <string-array name="data_items_member">
+        <item>详细资料</item>
+        <item>TA的推荐</item>
+        <item>资产信息</item>
+        <item>沟通记录</item>
+        <item>回访记录</item>
+        <item>预约记录</item>
+    </string-array>
+
+    <string-array name="data_items_workspace">
+        <item>详细资料</item>
+        <item>TA的推荐</item>
+        <item>资产信息</item>
+        <item>沟通记录</item>
+
+        <item>预约记录</item>
+        <item>回访记录</item>
+        <item>sd记录</item>
+    </string-array>
+
+    <string-array name="data_time_am">
+        <item>08:00~08:30</item>
+        <item>08:30~09:00</item>
+        <item>09:00~09:30</item>
+        <item>09:30~10:00</item>
+        <item>10:00~10:30</item>
+        <item>10:30~11:00</item>
+        <item>11:00~11:30</item>
+        <item>11:30~12:00</item>
+    </string-array>
+
+    <string-array name="data_time_pm">
+        <item>12:00~12:30</item>
+        <item>12:30~13:00</item>
+        <item>13:00~13:30</item>
+        <item>13:30~14:00</item>
+        <item>14:00~14:30</item>
+        <item>14:30~15:00</item>
+        <item>15:00~15:30</item>
+        <item>15:30~16:00</item>
+        <item>16:00~16:30</item>
+        <item>16:30~17:00</item>
+        <item>17:00~17:30</item>
+        <item>17:30~18:00</item>
+        <item>18:00~18:30</item>
+        <item>18:30~19:00</item>
+        <item>19:00~19:30</item>
+        <item>19:30~20:00</item>
+        <item>20:00~20:30</item>
+        <item>20:30~21:00</item>
+        <item>21:00~21:30</item>
+        <item>21:30~22:00</item>
+    </string-array>
+
+    <string-array name="left_book_time">
+        <item>09:00</item>
+        <item>09:30</item>
+        <item>10:00</item>
+        <item>10:30</item>
+        <item>11:00</item>
+        <item>11:30</item>
+        <item>12:00</item>
+        <item>12:30</item>
+        <item>13:00</item>
+        <item>13:30</item>
+        <item>14:00</item>
+        <item>14:30</item>
+        <item>15:00</item>
+        <item>15:30</item>
+        <item>16:00</item>
+        <item>16:30</item>
+        <item>17:00</item>
+        <item>17:30</item>
+        <item>18:00</item>
+        <item>18:30</item>
+        <item>19:00</item>
+        <item>19:30</item>
+        <item>20:00</item>
+        <item>20:30</item>
+        <item>21:00</item>
+        <item>21:30</item>
+        <item>22:00</item>
+        <item>22:30</item>
+        <item>23:00</item>
+        <item>23:30</item>
+        <item>24:00</item>
+    </string-array>
+
+</resources>
